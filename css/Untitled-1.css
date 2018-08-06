@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+nav{
+	width: 1200px;
+}
+
+ul{
+	width: 1056px;
+	margin-left: 72px;
+	margin-right: 72px;
+}
+
+nav li {
+	display: inline-block;
+	white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 8px 10px;
+}
+*/
+
+.main-navigation {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    height: 70px;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left;
+    font: 14px Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.main-navigation ul li {
+    position: relative;
+    left: -50%;
+    float: left;
+    margin: 0 0px;
+    height: 40px
+}
+
+.main-navigation ul li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 0 75px;
+    line-height: 55px;
+}
+
+.main-navigation ul li a:hover {
+    color: #766357;
+}
+
