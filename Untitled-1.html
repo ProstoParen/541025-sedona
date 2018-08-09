@@ -11,13 +11,13 @@
       <nav class="main-navigation">
         <ul>
           <li>
-            <a href="#">ИНФОРМАЦИЯ</a> <!--Вместо ссылки ставить заглушку или что то  вроде "/page-3.html"-->
+            <a href="#">ИНФОРМАЦИЯ</a> <!--Вместо ссылки ставить заглушку или что то  вроде "page-3.html"-->
           </li>
           <li>
             <a href="#">ФОТО И ВИДЕО</a>
           </li>
 		  <li class="label">
-		      <img src="img/nav-top-png.png" alt="logo" width="138" height="70"> 
+		      <img src="img/nav-top-png.png" alt="logo" width="138" height="70"> <!--Кстати странный элемент, плохо представляю как его стилизовать-->
 		  </li> 
           <li>
             <a href="#">КАРТА ШТАТА</a>
@@ -29,7 +29,7 @@
       </nav>
     </div>
 </header>
-<main>
+<main class="container">
     <div class="index-logo">
         <img src="img/background photo.jpg" width="368" height="204" alt="SEDONA">
     </div>
@@ -38,7 +38,7 @@
 	</div>
     <section class="deviz">
         <div class="deviz-sedon"> <!--div не лишний, и стоит ли прописывать сходным по стилю блокам одинаковые классы для дальнейшей стилизации?-->
-           <b><h1>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h1></b>
+           <b><h1>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h1></b> <!--Это h1 или некий рекламный блок с уровнем h2 (стоит ли тогда добавить выше скрытый h1 "Город Седона")?-->
            <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>  
            </div>
     </section>
@@ -102,7 +102,7 @@
 	</section>
 <section class="deviz">
 	<div class="deviz-sedon">
-		<b class="deviz-sedon"><h1>ЗАИНТЕРЕСОВАЛИСЬ?</h1></b>
+		<b class="deviz-sedon"><h1>ЗАИНТЕРЕСОВАЛИСЬ?</h1></b><!--ТЕГ B плохо((((-->
 		<p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
 	</div>
 	<div class="search">
@@ -110,7 +110,7 @@
 			<h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2> 
 		</div>
 		<div class="serch-date">
-			<form class="search-form" action="#" method="post">
+			<form class="search-form" action="#" method="post"> <!--ОБЕРТКУ ПОЛЕЙ ФОРМ СДЕЛАТЬ НА <P>!!!-->
 				<div class="date-in"><!--Верстаю все на div, стоит или перегружаю код?-->
 					<b>ДАТА ЗАЕЗДА:</b><input type="text" name="date" value="" placeholder="ДАТА">
 				</div>
@@ -134,14 +134,14 @@
 	</div>
 </section>
 </main>
-<footer class="main-footer">
+<footer class="main-footer"> <!--Название классов нормально подбираю или стоит что то поменять?-->
 	<div class="container">
 		<section class="footer-contacts"> <!--Правильно ли примен тег section?-->
 		    <b class="featires-item">#VISITSEDONA</b>
 		</section>
-		<section class="footer-social">
-			<div class="social-btn">
-				<a href="#"><img src="img/t.png" alt="Твитер"></a>
+		<section class="footer-social"><!--Стоит ли делать этот раздел списком?-->
+			<div class="social-btn"> <!--Добавить классы для соц сетей .social-btn vk-btn-->
+				<a href="#"><img src="img/t.png" alt="Твитер"></a> <!--На лекции сказали что тег img здесь не уместен, так а на что его заминить? Ах да, и надо сделать их фонами-->
 			</div>
 			<div class="social-btn">
 				<a href="#"><img src="img/f.png" alt="Фейсбук"></a>
