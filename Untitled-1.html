@@ -16,8 +16,8 @@
           <li>
             <a href="#">ФОТО И ВИДЕО</a>
           </li>
-		  <li class="label">
-		      <img src="img/nav-top-png.png" alt="logo" width="138" height="70"> <!--Кстати странный элемент, плохо представляю как его стилизовать-->
+		  <li class="logo">
+		      <img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"> <!--Кстати странный элемент, плохо представляю как его стилизовать-->
 		  </li> 
           <li>
             <a href="#">КАРТА ШТАТА</a>
@@ -30,15 +30,18 @@
     </div>
 </header>
 <main class="container">
-    <div class="index-logo">
+    <!-- <div class="index-logo"> ПОТОМ ПРОСТО ВСТАВЛЮ В CSS как фоновое изображение
         <img src="img/background photo.jpg" width="368" height="204" alt="SEDONA">
-    </div>
+    </div> -->
+    <h1 class="visually-hidden">Sedona</h1>
+    <div class="welcome"></div>
+    <div class="img-logo"></div>
     <div class="float-border">
-	     <img src="img/white.png">
+	     <img src="img/white.png"> <!--Плохо понимаю как сделать этот элемент-->
 	</div>
     <section class="deviz">
         <div class="deviz-sedon"> <!--div не лишний, и стоит ли прописывать сходным по стилю блокам одинаковые классы для дальнейшей стилизации?-->
-           <b><h1>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h1></b> <!--Это h1 или некий рекламный блок с уровнем h2 (стоит ли тогда добавить выше скрытый h1 "Город Седона")?-->
+           <b><h2>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2></b> <!--Это h1 или некий рекламный блок с уровнем h2 (стоит ли тогда добавить выше скрытый h1 "Город Седона")?-->
            <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>  
            </div>
     </section>
@@ -47,7 +50,7 @@
             <div class="index-content-left">
                 <h2>НАСТОЯЩИ ГОРОДОК</h2>
                 <p>-№1-</p> 
-                <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p> 
+                <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p> <!--Белый текст-->
             </div>
             <div class="index-content-right">
                 <div class="galery-conent">
@@ -103,54 +106,63 @@
 <section class="deviz">
 	<div class="deviz-sedon">
 		<b class="deviz-sedon"><h1>ЗАИНТЕРЕСОВАЛИСЬ?</h1></b><!--ТЕГ B плохо((((-->
-		<p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
-	</div>
+        <p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
+        <div class="search-head">
+                <h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2> 
+        </div>
+    </div>
 	<div class="search">
-		<div class="search-head">
-			<h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2> 
-		</div>
-		<div class="serch-date">
-			<form class="search-form" action="#" method="post"> <!--ОБЕРТКУ ПОЛЕЙ ФОРМ СДЕЛАТЬ НА <P>!!!-->
+		<div class="serch-form">
+			<form class="search-date" action="#" method="post"> <!--ОБЕРТКУ ПОЛЕЙ ФОРМ СДЕЛАТЬ НА <P>!!!-->
 				<div class="date-in"><!--Верстаю все на div, стоит или перегружаю код?-->
-					<b>ДАТА ЗАЕЗДА:</b><input type="text" name="date" value="" placeholder="ДАТА">
+					<p>ДАТА ЗАЕЗДА:</p><input type="text" name="date" value="" placeholder="ДАТА">
 				</div>
 				<div class="date-out">
-					<b>ДАТА ВЫЕЗДА:</b><input type="text" name="time" value="" placeholder="ДАТА">
+					<p>ДАТА ВЫЕЗДА:</p><input type="text" name="time" value="" placeholder="ДАТА">
 				</div>
 				<div class="old">
-					<b>ВЗРОСЛЫЕ</b>
+					<p>ВЗРОСЛЫЕ</p>
 					<input type="numder" name="" value="" placeholder="0">
 				</div>
 				<div class="yung">
-					<b>ДЕТИ</b>
+					<p>ДЕТИ</p>
 					<input type="tel" name="phone" value="" placeholder="0">
-					<button class="btn" type="submit">НАЙТИ</button>
-				</div>
+                </div>
+                <div class="search-find">
+                    <button class="btn" type="submit"><p>НАЙТИ</p></button>
+                </div>
 		   </form>
 		</div>
 	</div>
-	<div class="maps">
+	<!-- <div class="maps"> Сделаю фоном выше
 		<img src="img/map.jpg" width="368" height="204" alt="maps">
-	</div>
+	</div> -->
 </section>
 </main>
 <footer class="main-footer"> <!--Название классов нормально подбираю или стоит что то поменять?-->
 	<div class="container">
 		<section class="footer-contacts"> <!--Правильно ли примен тег section?-->
-		    <b class="featires-item">#VISITSEDONA</b>
+		    <p class="featires-item">#VISITSEDONA</p>
 		</section>
-		<section class="footer-social"><!--Стоит ли делать этот раздел списком?-->
-			<div class="social-btn"> <!--Добавить классы для соц сетей .social-btn vk-btn-->
-				<a href="#"><img src="img/t.png" alt="Твитер"></a> <!--На лекции сказали что тег img здесь не уместен, так а на что его заминить? Ах да, и надо сделать их фонами-->
+		<section class="footer-social">
+            <ul>
+                <li><a class="social-btn" href="#"><img src="img/t.png">Твитер</a></li>
+                <li><a class="social-btn" href="#"><img src="img/f.png">Фейсбук</a></li>
+                <li><a class="social-btn" href="#"><img src="img/yutube.png">Юутуб</a></li>
+            </ul>
+      
+			<!-- <div class="social-btn"> Старая соц панель на дивах
+				<a href="#"><img src="img/t.png"></a> 
 			</div>
 			<div class="social-btn">
-				<a href="#"><img src="img/f.png" alt="Фейсбук"></a>
+				<a href="#"><img src="img/f.png"></a>
 			</div>
 			<div class="social-btn">	
-				<a href="#"><img src="img/yutube.png" alt="ЮУТУБ"></a>
-			</div>
+				<a href="#"><img src="img/yutube.png"></a>
+            </div> -->
+            
 		</section>
-		<div class="footer-website">
+		<div class="footer-copyright">
 			<a href="https://htmlacademy.ru/">
 				<img src="img/html-academy.png">		
 			</a>  
