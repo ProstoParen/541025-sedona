@@ -17,7 +17,7 @@
             <a href="#">ФОТО И ВИДЕО</a>
           </li>
 		  <li class="logo">
-		      <img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"> <!--Кстати странный элемент, плохо представляю как его стилизовать-->
+		      <img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"> <!--СДЕЛАТЬ ССЫЛКОЙ И ПОСТАВИТЬ В КОНЦЕ СПИСКА-->
 		  </li> 
           <li>
             <a href="#">КАРТА ШТАТА</a>
@@ -29,15 +29,15 @@
       </nav>
     </div>
 </header>
-<main class="container">
+<main class="main-content">
     <!-- <div class="index-logo"> ПОТОМ ПРОСТО ВСТАВЛЮ В CSS как фоновое изображение
         <img src="img/background photo.jpg" width="368" height="204" alt="SEDONA">
     </div> -->
     <h1 class="visually-hidden">Sedona</h1>
-    <div class="welcome"></div>
+    <div class="welcome">  </div>
     <div class="img-logo"></div>
     <div class="float-border">
-	     <img src="img/white.png"> <!--Плохо понимаю как сделать этот элемент-->
+	     <img src="img/white.png"> <!--СДелать фоновым (фикс высота и 100%ширина псевдоэлемента)-->
 	</div>
     <section class="deviz">
         <div class="deviz-sedon"> <!--div не лишний, и стоит ли прописывать сходным по стилю блокам одинаковые классы для дальнейшей стилизации?-->
@@ -47,7 +47,7 @@
     </section>
 	<section class="advantages">
         <div class="fact">
-            <div class="index-content-left">
+            <div class="index-content-left"> <!--Article все сделать-->
                 <h2>НАСТОЯЩИ ГОРОДОК</h2>
                 <p>-№1-</p> 
                 <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p> <!--Белый текст-->
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="features">
+        <div class="features"> <!--Список-->
             <div class="featires-item">
 			    <img src="img/home.png" alt="housing"> <!--Знаю что всем изображениям прописать альтернативный текст и размеры-->
 	            <b>ЖИЛЬЁ</b>
@@ -75,7 +75,8 @@
 	            <p>НЕ ТОЛЬКО КИТАЙСКОГО, НО И МЕСТНОГО ПРОИЗВОДСТВА</p>  
            </div>
        </div>
-       <div class="index-content">
+       <!--</Article> все сделать-->
+       <div class="index-content"><!--Article все сделать-->
             <div class="index-content-left">
                  <img src="img/Layer 14.jpg" width="512" height="256">
 	        </div>
@@ -85,7 +86,7 @@
                 <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
             </div>
        </div>
-        <section class="features">
+        <section class="features"><!--Список-->
             <div class="featires-item">
                 <b class="featires-item">НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
                 <p>№3</p>
@@ -102,10 +103,11 @@
                 <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПИТСЯ ТАМ</p>
             </div>
         </section>
+        <!--</Article> все сделать-->
 	</section>
-<section class="deviz">
+<section class="deviz"><!--Пересмотреть транслит и убрать-->
 	<div class="deviz-sedon">
-		<b class="deviz-sedon"><h1>ЗАИНТЕРЕСОВАЛИСЬ?</h1></b><!--ТЕГ B плохо((((-->
+		<h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2><!--ТЕГ B плохо((((-->
         <p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
         <div class="search-head">
                 <h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2> 
@@ -114,8 +116,8 @@
 	<div class="search">
 		<div class="serch-form">
 			<form class="search-date" action="#" method="post"> <!--ОБЕРТКУ ПОЛЕЙ ФОРМ СДЕЛАТЬ НА <P>!!!-->
-				<div class="date-in"><!--Верстаю все на div, стоит или перегружаю код?-->
-					<p>ДАТА ЗАЕЗДА:</p><input type="text" name="date" value="" placeholder="ДАТА">
+				<div class="date-in"><!--Переделать на p-->
+					<p>ДАТА ЗАЕЗДА:</p><input type="text" name="date" value="" placeholder="ДАТА"> <!--Cвязать через LABEL-->
 				</div>
 				<div class="date-out">
 					<p>ДАТА ВЫЕЗДА:</p><input type="text" name="time" value="" placeholder="ДАТА">
@@ -134,19 +136,19 @@
 		   </form>
 		</div>
 	</div>
-	<!-- <div class="maps"> Сделаю фоном выше
-		<img src="img/map.jpg" width="368" height="204" alt="maps">
-	</div> -->
 </section>
 </main>
 <footer class="main-footer"> <!--Название классов нормально подбираю или стоит что то поменять?-->
+	<!-- <div class="maps"> Сделаю фоном выше
+		<img src="img/map.jpg" width="368" height="204" alt="maps">
+	</div> -->
 	<div class="container">
 		<section class="footer-contacts"> <!--Правильно ли примен тег section?-->
 		    <p class="featires-item">#VISITSEDONA</p>
 		</section>
 		<section class="footer-social">
             <ul>
-                <li><a class="social-btn" href="#"><img src="img/t.png">Твитер</a></li>
+                <li><a class="social-btn" href="#"><img src="img/t.png">Твитер</a></li><!--Сделать фоновым-->
                 <li><a class="social-btn" href="#"><img src="img/f.png">Фейсбук</a></li>
                 <li><a class="social-btn" href="#"><img src="img/yutube.png">Юутуб</a></li>
             </ul>

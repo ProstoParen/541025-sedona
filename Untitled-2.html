@@ -30,20 +30,20 @@
     </div>
 </header>
 <main class="container">
-    <h1 class="visually-hidden">Бронирование гостиниц</h1>
-    <section class="filters">
+    <h1 class="visually-hidden">Бронирование гостиниц</h1> 
+    <section class="filters"> <!--класс SEARH-->
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <div class="filters-form">
             <form action="" method="get">
-                <p>ИНФРАСТРУКТУРА:<p>
-                <input type="checkbox" name="pool" id="pool-field" checked> БАССЕЙН
+                <legend>ИНФРАСТРУКТУРА:</legend>> <!--Обернуть в филсет-->
+                <input type="checkbox" name="pool" id="pool-field" checked> БАССЕЙН <!--Связать LABEL и обернуть в p-->
                 <input type="checkbox" name="parking" id="parking-field"> ПАРКОВКА
                 <input type="checkbox" name="WI-FI" id="WI-FI-field"> WI-FI
-                <p>ТИП ЖИЛЬЯ</p>
+                <legend>ТИП ЖИЛЬЯ</legend><!--Обернуть в филсет-->
                 <input type="checkbox" name="hotel" id="hotel-field" checked> ГОСТИНИЦА
                 <input type="checkbox" name="motel" id="motel-field" checked> МОТЕЛЬ
                 <input type="checkbox" name="apartaments" id="apartaments-field" checked> АПАРТАМЕНТЫ 
-                <!-- Тут будет бегунок со стоимостью -->
+                <!-- Тут будет бегунок со стоимостью --><!--Обернуть в филсет-->
             </form> 
         </div>
     </section>
@@ -56,19 +56,20 @@
                     <img src="" width="" height="" alt="Гостиница">
             </div>
             <div>
+                <!-- Сделать списком -->
                     <h3>AMARA RESORT  &amp; SPA</h3>
-                    ГОСТИНИЦА ОТ  4000 Р. <!-- В КАКОЙ ТЕГ ЛУЧШЕ ВСЕГО ОБЕРНУТЬ? -->
+                    ГОСТИНИЦА ОТ  4000 Р. <!-- В КАКОЙ ТЕГ ЛУЧШЕ ВСЕГО ОБЕРНУТЬ? В div а внутри span -->
                     <div class="more-info">
                         <a href="#"><p>ПОДРОБНЕЕ</p></a>
                     </div>
                     <div class="booking">
                     <form action="" method="get">
-                        <button class="btn" type="submit"><p>ЗАБРОНИРОВАТЬ</p></button>
+                        <button class="btn" type="submit"><p>ЗАБРОНИРОВАТЬ</p></button> <!--Сделать ссылкой-->
                     </div>
                     </form>
             </div>
             <div class="staars">
-                <!-- Звездочки -->
+                <!-- Звездочки cписком и вроде как контент -->
             </div>
             <div class="rating">
                 РЕЙТИНГ: 8,5 
