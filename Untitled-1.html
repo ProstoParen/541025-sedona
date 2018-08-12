@@ -11,103 +11,105 @@
       <nav class="main-navigation">
         <ul>
           <li>
-            <a href="#">ИНФОРМАЦИЯ</a> <!--Вместо ссылки ставить заглушку или что то  вроде "page-3.html"-->
+            <a href="#">ИНФОРМАЦИЯ</a> 
           </li>
           <li>
             <a href="#">ФОТО И ВИДЕО</a>
           </li>
-		  <li class="logo">
-		      <img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"> <!--СДЕЛАТЬ ССЫЛКОЙ И ПОСТАВИТЬ В КОНЦЕ СПИСКА-->
-		  </li> 
           <li>
             <a href="#">КАРТА ШТАТА</a>
           </li>
           <li>
             <a href="#">ГОСТИНИЦЫ</a>
           </li>
+          <li class="logo">
+            <a href="#"><img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"></a> 
+          </li>
         </ul>
       </nav>
     </div>
 </header>
 <main class="main-content">
-    <!-- <div class="index-logo"> ПОТОМ ПРОСТО ВСТАВЛЮ В CSS как фоновое изображение
-        <img src="img/background photo.jpg" width="368" height="204" alt="SEDONA">
-    </div> -->
+    <div class="index-logo"> 
+        <!-- Здесь будет фоновое изображение -->
     <h1 class="visually-hidden">Sedona</h1>
-    <div class="welcome">  </div>
+    <div class="welcome"><img src="img/welcome.png" width="" height="" alt="welcome to the gorgeus Sedona"></div>
     <div class="img-logo"></div>
     <div class="float-border">
-	     <img src="img/white.png"> <!--СДелать фоновым (фикс высота и 100%ширина псевдоэлемента)-->
-	</div>
+        <!--Сlелать фоновым (фикс высота и 100%ширина псевдоэлемента)-->
+    </div>
+    </div>
     <section class="deviz">
-        <div class="deviz-sedon"> <!--div не лишний, и стоит ли прописывать сходным по стилю блокам одинаковые классы для дальнейшей стилизации?-->
-           <b><h2>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2></b> <!--Это h1 или некий рекламный блок с уровнем h2 (стоит ли тогда добавить выше скрытый h1 "Город Седона")?-->
+        <div class="deviz-sedon"> 
+           <b><h2>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2></b>
            <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>  
            </div>
     </section>
 	<section class="advantages">
-        <div class="fact">
-            <div class="index-content-left"> <!--Article все сделать-->
+        <article class="real-town">
+            <div class="fact">
+                <div class="index-content-left">
                 <h2>НАСТОЯЩИ ГОРОДОК</h2>
                 <p>-№1-</p> 
-                <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p> <!--Белый текст-->
+                <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <div class="index-content-right">
-                <div class="galery-conent">
-                    <img src="img/Layer 13.jpg" alt="lief" width="512" height="256">
+                <div class="index-content-right">
+                    <div class="galery-conent">
+                     <img src="img/Layer 13.jpg" alt="lief" width="512" height="256">
+                    </div>
+                </div>  
+            </div>
+            <ul class="features"> 
+               <li class="featires-item">
+			        <div class="housing"><!--Изображения вставлю фоном--></div>
+	                <b>ЖИЛЬЁ</b>
+	                <p>РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО!</p>  
+                </li>
+                <li class="featires-item">
+	    		    <div class="food"></div>
+                    <b>ЕДА</b>
+	                <p>ВСЕГДА ЗАКАЗЫВАЙТЕ ФИРМЕННЫЙ БУРГЕР. ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</p>  
+                </li>
+	            <li class="featires-item">
+                    <div class="suvenir"></div>
+	                <b>СУВЕНИРЫ</b>
+	                <p>НЕ ТОЛЬКО КИТАЙСКОГО, НО И МЕСТНОГО ПРОИЗВОДСТВА</p>  
+                </li>
+            </ul>
+        </article>
+        <article class="devil's-bridge">
+            <div class="index-content">
+                <div class="index-content-left">
+                    <img src="img/Layer 14.jpg" width="512" height="256">
+	            </div>
+                <div class="index-content-right">
+	               <h2 class="index-conent-title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
+	               <p>-№2-</p> 
+                   <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
                 </div>
             </div>
-        </div>
-        <div class="features"> <!--Список-->
-            <div class="featires-item">
-			    <img src="img/home.png" alt="housing"> <!--Знаю что всем изображениям прописать альтернативный текст и размеры-->
-	            <b>ЖИЛЬЁ</b>
-	            <p>РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО!</p>  
-            </div>
-            <div class="featires-item">
-	    		<img src="img/food.png" alt="food">
-                <b>ЕДА</b>
-	            <p>ВСЕГДА ЗАКАЗЫВАЙТЕ ФИРМЕННЫЙ БУРГЕР. ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</p>  
-            </div>
-	        <div class="featires-item">
-		    	<img src="img/suvenir.png" alt="suvenir">
-	            <b>СУВЕНИРЫ</b>
-	            <p>НЕ ТОЛЬКО КИТАЙСКОГО, НО И МЕСТНОГО ПРОИЗВОДСТВА</p>  
-           </div>
-       </div>
-       <!--</Article> все сделать-->
-       <div class="index-content"><!--Article все сделать-->
-            <div class="index-content-left">
-                 <img src="img/Layer 14.jpg" width="512" height="256">
-	        </div>
-            <div class="index-content-right">
-	            <h2 class="index-conent-title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
-	            <p>-№2-</p> 
-                <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
-            </div>
-       </div>
-        <section class="features"><!--Список-->
-            <div class="featires-item">
-                <b class="featires-item">НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
-                <p>№3</p>
-                <p>ВСЕ ДОСТОПРЕМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</p>  
-            </div>
-            <div class="featires-item">
-                <b class="featires-item">КРАСИВАЯ ДОРОГА</b>
-                <p>№4</p>
-                <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</p>  
-            </div>
-            <div class="featires-item">
-                <b class="featires-item">МАЛО ТУРИСТОВ</b>
-	            <p>№5</p>
-                <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПИТСЯ ТАМ</p>
-            </div>
-        </section>
-        <!--</Article> все сделать-->
+            <ul class="features">
+               <li class="featires-item">
+                    <b class="featires-item">НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
+                    <p>№3</p>
+                    <p>ВСЕ ДОСТОПРЕМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</p>  
+               </li>
+                <li class="featires-item">
+                    <b class="featires-item">КРАСИВАЯ ДОРОГА</b>
+                    <p>№4</p>
+                    <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</p>  
+                </li>
+                <li class="featires-item">
+                    <b class="featires-item">МАЛО ТУРИСТОВ</b>
+	                <p>№5</p>
+                    <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПИТСЯ ТАМ</p>
+                </li>
+            </ul>
+        </article>
 	</section>
-<section class="deviz"><!--Пересмотреть транслит и убрать-->
-	<div class="deviz-sedon">
-		<h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2><!--ТЕГ B плохо((((-->
+<section class="motto">
+	<div class="motto-sedon">
+		<h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
         <p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
         <div class="search-head">
                 <h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2> 
@@ -115,54 +117,43 @@
     </div>
 	<div class="search">
 		<div class="serch-form">
-			<form class="search-date" action="#" method="post"> <!--ОБЕРТКУ ПОЛЕЙ ФОРМ СДЕЛАТЬ НА <P>!!!-->
-				<div class="date-in"><!--Переделать на p-->
-					<p>ДАТА ЗАЕЗДА:</p><input type="text" name="date" value="" placeholder="ДАТА"> <!--Cвязать через LABEL-->
-				</div>
-				<div class="date-out">
-					<p>ДАТА ВЫЕЗДА:</p><input type="text" name="time" value="" placeholder="ДАТА">
-				</div>
-				<div class="old">
-					<p>ВЗРОСЛЫЕ</p>
-					<input type="numder" name="" value="" placeholder="0">
-				</div>
-				<div class="yung">
-					<p>ДЕТИ</p>
-					<input type="tel" name="phone" value="" placeholder="0">
-                </div>
-                <div class="search-find">
-                    <button class="btn" type="submit"><p>НАЙТИ</p></button>
-                </div>
+			<form class="search-date" action="#" method="post"> 
+				<p class="date-in">
+					<label>ДАТА ЗАЕЗДА:<input type="text" name="date" value="" placeholder="ДАТА"></label>
+				</p>
+				<p class="date-out">
+                    <label>ДАТА ВЫЕЗДА:<input type="text" name="time" value="" placeholder="ДАТА"></label>
+				</p>
+				<p class="old">
+                    <label>ВЗРОСЛЫЕ
+					<input type="numder" name="" value="" placeholder="0"></label>
+				</p>
+				<p class="yung">
+                    <label>ДЕТИ
+					<input type="tel" name="phone" value="" placeholder="0"></label>
+                </p>
+                <p class="search-find">
+                    <button class="btn" type="submit">НАЙТИ</button>
+                </p>
 		   </form>
 		</div>
 	</div>
 </section>
 </main>
-<footer class="main-footer"> <!--Название классов нормально подбираю или стоит что то поменять?-->
-	<!-- <div class="maps"> Сделаю фоном выше
+<footer class="main-footer">
+	<!-- <div class="maps"> Здесь будет карта
 		<img src="img/map.jpg" width="368" height="204" alt="maps">
 	</div> -->
 	<div class="container">
-		<section class="footer-contacts"> <!--Правильно ли примен тег section?-->
+		<section class="footer-contacts"> 
 		    <p class="featires-item">#VISITSEDONA</p>
 		</section>
 		<section class="footer-social">
             <ul>
-                <li><a class="social-btn" href="#"><img src="img/t.png">Твитер</a></li><!--Сделать фоновым-->
-                <li><a class="social-btn" href="#"><img src="img/f.png">Фейсбук</a></li>
-                <li><a class="social-btn" href="#"><img src="img/yutube.png">Юутуб</a></li>
+                <li><a class="social-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
+                <li><a class="social-btn" href="#">Фейсбук</a></li>
+                <li><a class="social-btn" href="#">Юутуб</a></li>
             </ul>
-      
-			<!-- <div class="social-btn"> Старая соц панель на дивах
-				<a href="#"><img src="img/t.png"></a> 
-			</div>
-			<div class="social-btn">
-				<a href="#"><img src="img/f.png"></a>
-			</div>
-			<div class="social-btn">	
-				<a href="#"><img src="img/yutube.png"></a>
-            </div> -->
-            
 		</section>
 		<div class="footer-copyright">
 			<a href="https://htmlacademy.ru/">

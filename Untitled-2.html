@@ -11,39 +11,45 @@
       <nav class="main-navigation">
         <ul>
           <li>
-            <a href="#">ИНФОРМАЦИЯ</a> <!--Вместо ссылки ставить заглушку или что то  вроде "page-3.html"-->
+            <a href="#">ИНФОРМАЦИЯ</a> 
           </li>
           <li>
             <a href="#">ФОТО И ВИДЕО</a>
           </li>
-		  <li class="logo">
-		      <img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"> <!--Кстати странный элемент, плохо представляю как его стилизовать-->
-		  </li> 
           <li>
             <a href="#">КАРТА ШТАТА</a>
           </li>
           <li>
             <a href="#">ГОСТИНИЦЫ</a>
           </li>
+          <li class="logo">
+            <a href="#"><img src="img/nav-top-png.png" alt="Логотип города Sedona" width="138" height="70"></a> 
+          </li>
         </ul>
       </nav>
     </div>
 </header>
-<main class="container">
+<fieldset class="container">
     <h1 class="visually-hidden">Бронирование гостиниц</h1> 
-    <section class="filters"> <!--класс SEARH-->
+    <section class="filters"> <!--класс SEARH, упс, он уже занят в поиске на главной странице, может пусть остается filters?-->
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <div class="filters-form">
             <form action="" method="get">
-                <legend>ИНФРАСТРУКТУРА:</legend>> <!--Обернуть в филсет-->
-                <input type="checkbox" name="pool" id="pool-field" checked> БАССЕЙН <!--Связать LABEL и обернуть в p-->
-                <input type="checkbox" name="parking" id="parking-field"> ПАРКОВКА
-                <input type="checkbox" name="WI-FI" id="WI-FI-field"> WI-FI
-                <legend>ТИП ЖИЛЬЯ</legend><!--Обернуть в филсет-->
-                <input type="checkbox" name="hotel" id="hotel-field" checked> ГОСТИНИЦА
-                <input type="checkbox" name="motel" id="motel-field" checked> МОТЕЛЬ
-                <input type="checkbox" name="apartaments" id="apartaments-field" checked> АПАРТАМЕНТЫ 
-                <!-- Тут будет бегунок со стоимостью --><!--Обернуть в филсет-->
+                <fieldset>
+                    <legend>ИНФРАСТРУКТУРА:</legend>
+                    <label><input type="checkbox" name="pool" id="pool-field" checked> БАССЕЙН</label> 
+                    <label><input type="checkbox" name="parking" id="parking-field"> ПАРКОВКА</label>
+                    <label><input type="checkbox" name="WI-FI" id="WI-FI-field"> WI-FI</label>
+                </fieldset>
+                <fieldset>
+                <legend>ТИП ЖИЛЬЯ</legend>
+                    <label><input type="checkbox" name="hotel" id="hotel-field" checked> ГОСТИНИЦА</label>
+                    <label><input type="checkbox" name="motel" id="motel-field" checked> МОТЕЛЬ</label>
+                    <label><input type="checkbox" name="apartaments" id="apartaments-field" checked> АПАРТАМЕНТЫ</label>
+                </fieldset>
+                <fieldset>
+                    <!-- Тут будет бегунок со стоимостью -->
+                </fieldset>
             </form> 
         </div>
     </section>
@@ -51,96 +57,99 @@
         <div class="sorting">
             <!-- Тут будет форма сортировки -->
         </div>
-        <div class="hotel-found">
-            <div class="hotel-picture">
+        <ul>
+            <li class="hotel-found">
+                <div class="hotel-picture">
                     <img src="" width="" height="" alt="Гостиница">
-            </div>
-            <div>
-                <!-- Сделать списком -->
+                </div>
+                <div>
                     <h3>AMARA RESORT  &amp; SPA</h3>
-                    ГОСТИНИЦА ОТ  4000 Р. <!-- В КАКОЙ ТЕГ ЛУЧШЕ ВСЕГО ОБЕРНУТЬ? В div а внутри span -->
+                        <div>
+                            <span>ГОСТИНИЦА</span> 
+                            <span>ОТ  4000 Р.</span>
+                        </div> 
                     <div class="more-info">
                         <a href="#"><p>ПОДРОБНЕЕ</p></a>
                     </div>
                     <div class="booking">
-                    <form action="" method="get">
-                        <button class="btn" type="submit"><p>ЗАБРОНИРОВАТЬ</p></button> <!--Сделать ссылкой-->
+                        <a href="#"><p>ЗАБРОНИРОВАТЬ</p></a> 
                     </div>
-                    </form>
-            </div>
-            <div class="staars">
-                <!-- Звездочки cписком и вроде как контент -->
-            </div>
-            <div class="rating">
-                РЕЙТИНГ: 8,5 
-            </div>
-        </div>
-        <div class="hotel-found">
-            <div class="hotel-picture">
+                </div>
+                <div class="staars">
+                    <!-- Звездочки cписком и вроде как контент -->
+                </div>
+                <div class="rating">
+                    <p>РЕЙТИНГ: 8,5 </p>
+                </div>
+            </li>
+            <li class="hotel-found">
+                <div class="hotel-picture">
                     <img src="" width="" height="" alt="МОТЕЛЬ">
-            </div>
-            <div>
+                </div>
+                <div>
                     <h3>DESERT QUAIL INN</h3>
-                    МОТЕЛЬ ОТ 3000 Р.
+                    <div>
+                        <span>МОТЕЛЬ</span> 
+                        <span>ОТ  3000 Р.</span>
+                    </div> 
                     <div class="more-info">
                         <a href="#"><p>ПОДРОБНЕЕ</p></a>
                     </div>
                     <div class="booking">
-                    <form action="" method="get">
-                        <button class="btn" type="submit"><p>ЗАБРОНИРОВАТЬ</p></button>
+                        <a href="#"><p>ЗАБРОНИРОВАТЬ</p></a>
                     </div>
-                    </form>
-            </div>
-            <div class="staars">
+                </div>
+                <div class="staars">
                 <!-- Звездочки -->
-            </div>
-            <div class="rating">
-                РЕЙТИНГ: 8,9 
-            </div>
-        </div>
-        <div class="hotel-found">
-            <div class="hotel-picture">
+                </div>
+                <div class="rating">
+                    <p>РЕЙТИНГ: 8,9 </p>
+                </div>
+            </li>
+            <li class="hotel-found">
+                <div class="hotel-picture">
                     <img src="" width="" height="" alt="АПАРТАМЕНТЫ">
-            </div>
-            <div>
+                </div>
+                <div>
                     <h3>VILLAS AT POCO DIABLO  &amp; SPA</h3>
-                    АППАРТАМЕНТЫ 2000 Р.
+                    <div>
+                        <span>АППАРТАМЕНТЫ</span> 
+                        <span>ОТ  2000 Р.</span>
+                    </div> 
                     <div class="more-info">
                         <a href="#"><p>ПОДРОБНЕЕ</p></a>
                     </div>
                     <div class="booking">
-                    <form action="" method="get">
-                        <button class="btn" type="submit"><p>ЗАБРОНИРОВАТЬ</p></button>
+                        <a href="#"><p>ЗАБРОНИРОВАТЬ</p></a>
                     </div>
-                    </form>
-            </div>
-            <div class="staars">
+                </div>
+                <div class="staars">
                 <!-- Звездочки -->
-            </div>
-            <div class="rating">
-                РЕЙТИНГ: 9,2 
-            </div>
-        </div>
+                </div>
+                <div class="rating">
+                    <p>РЕЙТИНГ: 9,2 </p>
+                </div>
+            </li>
+        </ul>
     </section>
 </main>
-<footer class="main-footer"> <!--Название классов нормально подбираю или стоит что то поменять?-->
-	<div class="container">
-		<section class="footer-contacts"> <!--Правильно ли примен тег section?-->
-		    <p class="featires-item">#VISITSEDONA</p>
-		</section>
-		<section class="footer-social">
-            <section class="footer-social">
-                    <ul>
-                        <li><a class="social-btn" href="#"><img src="img/t.png">Твитер</a></li>
-                        <li><a class="social-btn" href="#"><img src="img/f.png">Фейсбук</a></li>
-                        <li><a class="social-btn" href="#"><img src="img/yutube.png">Юутуб</a></li>
-                    </ul>
-		</section>
-		<div class="footer-copyright">
-			<a href="https://htmlacademy.ru/">
-				<img src="img/html-academy.png">		
-			</a>  
-		</div>  
+<footer class="main-footer">
+    <div class="container">
+        <section class="footer-contacts"> 
+            <p class="featires-item">#VISITSEDONA</p>
+        </section>
+        <section class="footer-social">
+            <ul>
+                <li><a class="social-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
+                <li><a class="social-btn" href="#">Фейсбук</a></li>
+                <li><a class="social-btn" href="#">Юутуб</a></li>
+            </ul>
+        </section>
+        <div class="footer-copyright">
+            <a href="https://htmlacademy.ru/">
+                <img src="img/html-academy.png">		
+            </a>  
+        </div>  
     </div>
 </footer>
 </body>
