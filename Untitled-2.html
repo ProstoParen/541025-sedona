@@ -29,27 +29,27 @@
       </nav>
     </div>
 </header>
-<fieldset class="container">
+<main class="main-content">
     <h1 class="visually-hidden">Бронирование гостиниц</h1> 
     <section class="filters"> <!--класс SEARH, упс, он уже занят в поиске на главной странице, может пусть остается filters?-->
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <div class="filters-form">
             <form action="" method="get">
-                <fieldset>
+                <section>
                     <legend>ИНФРАСТРУКТУРА:</legend>
-                    <label><input type="checkbox" name="pool" id="pool-field" checked> БАССЕЙН</label> 
-                    <label><input type="checkbox" name="parking" id="parking-field"> ПАРКОВКА</label>
-                    <label><input type="checkbox" name="WI-FI" id="WI-FI-field"> WI-FI</label>
-                </fieldset>
-                <fieldset>
+                    <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field"> БАССЕЙН</label> 
+                    <input type="checkbox" name="parking" id="parking-field"><label for="parking-field"> ПАРКОВКА</label>
+                    <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field"> WI-FI</label>
+                </section>
+                <section>
                 <legend>ТИП ЖИЛЬЯ</legend>
-                    <label><input type="checkbox" name="hotel" id="hotel-field" checked> ГОСТИНИЦА</label>
-                    <label><input type="checkbox" name="motel" id="motel-field" checked> МОТЕЛЬ</label>
-                    <label><input type="checkbox" name="apartaments" id="apartaments-field" checked> АПАРТАМЕНТЫ</label>
-                </fieldset>
-                <fieldset>
+                    <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field"> ГОСТИНИЦА</label>
+                    <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field"> МОТЕЛЬ</label>
+                    <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field"> АПАРТАМЕНТЫ</label>
+                </section>
+                <section>
                     <!-- Тут будет бегунок со стоимостью -->
-                </fieldset>
+                </section>
             </form> 
         </div>
     </section>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="staars">
-                    <!-- Звездочки cписком и вроде как контент -->
+                    <!-- Звездочки фоном -->
                 </div>
                 <div class="rating">
                     <p>РЕЙТИНГ: 8,5 </p>
