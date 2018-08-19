@@ -6,6 +6,7 @@
 <link href="css/Untitled-1.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div class="shadow"><!-- Обернуть все в див для тени-->
 <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
@@ -31,29 +32,32 @@
 </header>
 <main class="main-content">
     <h1 class="visually-hidden">Бронирование гостиниц</h1> 
-    <section class="filters"> <!--класс SEARH, упс, он уже занят в поиске на главной странице, может пусть остается filters?-->
-        <h2 class="visually-hidden">Фильтр гостиниц</h2>
-        <div class="filters-form"> <!--Тут будет фоновое изображение-->
-            <form action="" method="get">
-                <section>
-                    <legend>ИНФРАСТРУКТУРА:</legend>
-                    <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field"> БАССЕЙН</label> <!--Cами чекм экспортировать в двух состояниях как изображения и скрыть через визуал хиден что бы поменять на другой-->
-                    <input type="checkbox" name="parking" id="parking-field"><label for="parking-field"> ПАРКОВКА</label>
-                    <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field"> WI-FI</label>
-                </section>
-                <section>
-                <legend>ТИП ЖИЛЬЯ</legend>
-                    <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field"> ГОСТИНИЦА</label>
-                    <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field"> МОТЕЛЬ</label>
-                    <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field"> АПАРТАМЕНТЫ</label>
-                </section>
-                <section>
-                    <!-- Тут будет бегунок со стоимостью -->
-                </section>
-            </form> 
+    <section class="filters"> 
+        <div class="container-smaal"> <!--Этот див будем использовать как центровщик?-->
+            <h2 class="visually-hidden">Фильтр гостиниц</h2>
+            <div class="filters-form"> <!--Тут будет фоновое изображение-->
+                <form action="" method="get">
+                    <fieldset class="">
+                        <legend>ИНФРАСТРУКТУРА:</legend>
+                        <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field"> БАССЕЙН</label> <!--Cами чеки экспортировать в двух состояниях как изображения и скрыть через визуал хиден что бы поменять на другой-->
+                        <input type="checkbox" name="parking" id="parking-field"><label for="parking-field"> ПАРКОВКА</label>
+                        <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field"> WI-FI</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>ТИП ЖИЛЬЯ</legend>
+                        <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field"> ГОСТИНИЦА</label>
+                        <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field"> МОТЕЛЬ</label>
+                        <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field"> АПАРТАМЕНТЫ</label>
+                    </fieldset>
+                    <fieldset>
+                        <!-- Тут будет бегунок со стоимостью -->
+                    </fieldset>
+                </form> 
+            </div>
         </div>
     </section>
     <section class="found">
+        <div class="container-smaal"> <!--Этот див будем использовать как центровщик?-->
         <div class="sorting">
             <!-- Тут будет форма сортировки -->
         </div>
@@ -131,18 +135,19 @@
                 </div>
             </li>
         </ul>
+        </div>
     </section>
 </main>
 <footer class="main-footer">
-    <div class="container">
+    <div class="container-smaal">
         <section class="footer-contacts"> 
             <p class="featires-item">#VISITSEDONA</p>
         </section>
         <section class="footer-social">
             <ul>
-                <li><a class="social-btn" href="#"><span class="visually-hidden">Твитер</span></a></li> <!--Текст потом спрячу-->
-                <li><a class="social-btn" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-                <li><a class="social-btn" href="#"><span class="visually-hidden">Юутуб</span></a></li>
+                <li><a class="social-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
+                <li><a class="social-btn" href="#">Фейсбук</a></li>
+                <li><a class="social-btn" href="#">Юутуб</a></li>
             </ul>
         </section>
         <div class="footer-copyright">
@@ -152,5 +157,6 @@
         </div>  
     </div>
 </footer>
+</div>
 </body>
 </html>
