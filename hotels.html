@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Седона</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="css/normalize.css" rel="stylesheet">
 <link href="css/Untitled-1.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -10,7 +12,7 @@
 <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <ul>
+        <ul class="site-navigation">
           <li>
             <a href="#">ИНФОРМАЦИЯ</a> 
           </li>
@@ -33,7 +35,7 @@
 <main class="main-content">
     <h1 class="visually-hidden">Бронирование гостиниц</h1> 
     <section class="filters"> 
-        <div class="container"> <!--Этот див будем использовать как центровщик?-->
+        <div class="container"> 
             <h2 class="visually-hidden">Фильтр гостиниц</h2>
             <div class="filters-form"> <!--Тут будет фоновое изображение-->
                 <form action="" method="get">
@@ -57,9 +59,32 @@
         </div>
     </section>
     <section class="found">
-        <div class="container-smaal"> <!--Этот див будем использовать как центровщик?-->
+        <div class="container-smaal"> 
         <div class="sorting">
-            <!-- Тут будет форма сортировки -->
+            <h3>НАЙДЕНО</h3>
+            <p>СОРТИРОВКА:</p>
+            <ul>
+                <li>
+                    <a href="#">ПО ЦЕНЕ</a>
+                </li>
+                <li>
+                    <a href="#">ПО ТИПУ</a>
+                </li>
+                <li>
+                    <a href="#">ПО РЕЙТИНГУ</a>
+                </li>
+            </ul>
+            <div class="arrow">
+                <a href="#">ПО УБЫВАНИЮ</a>
+            </div>
+            <div class="arrow">
+                <button class="dir-up" type="submit" width="" height="">
+                    <img src="#"alt="Сортировка по возрастанию">
+                </button>
+                <button class="dir-down" type="submit" width="" height="">
+                        <img src="#"alt="Сортировка по убыванию">
+                </button>
+            </div>
         </div>
         <ul>
             <li class="hotel-found">

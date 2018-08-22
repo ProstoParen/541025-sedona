@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Седона</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="css/normalize.css" rel="stylesheet">
 <link href="css/Untitled-1.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -10,7 +12,7 @@
 <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
-        <ul>
+        <ul class="site-navigation">
           <li>
             <a href="#">ИНФОРМАЦИЯ</a> 
           </li>
@@ -33,12 +35,11 @@
 <main class="main-content">
     <div class="index-logo"> 
         <!-- Здесь будет фоновое изображение -->
-    <h1 class="visually-hidden">Sedona</h1>
-    <div class="welcome"><img src="img/intro-welcome.svg" width="1200" height="510" alt="Welcome to the gorgeus Sedona"></div>
-    <div class="img-logo"></div>
-    <div class="float-border">
+        <h1 class="visually-hidden">Sedona</h1>
+        <div class="welcome"><img src="img/intro-welcome.svg" width="1200" height="510" alt="Welcome to the gorgeus Sedona"></div>
+        <div class="float-border">
         <!--Сlелать фоновым (фикс высота и 100%ширина псевдоэлемента и да это SVG)-->
-    </div>
+        </div>
     </div>
     <section class="deviz">
         <div class="deviz-sedon"> 
@@ -48,12 +49,12 @@
     </section>
 	<section class="advantages">
         <article class="real-town">
-            <div class="fact">
+            <div class="index-content">
                 <div class="index-content-left">
-                <h2>НАСТОЯЩИ ГОРОДОК</h2>
-                <p>-№1-</p> 
-                <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-            </div>
+                    <h2>НАСТОЯЩИ ГОРОДОК</h2>
+                    <p>-№1-</p> 
+                    <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                </div>
                 <div class="index-content-right">
                     <div class="galery-conent">
                      <img src="img/real-town.jpg" alt="Настоящий городок" width="800" height="258">
@@ -78,30 +79,30 @@
                 </li>
             </ul>
         </article>
-        <article class="devil's-bridge">
+        <article class="devil-bridge">
             <div class="index-content">
                 <div class="index-content-left">
-                    <img src="img/devil's-bridge.jpg" width="800" height="258" alt="Мост Дьявола">
+                    <img src="img/devil-bridge.jpg" width="800" height="258" alt="Мост Дьявола">
 	            </div>
                 <div class="index-content-right">
-	               <h2 class="index-conent-title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
+	               <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
 	               <p>-№2-</p> 
                    <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
                 </div>
             </div>
             <ul class="features">
                <li class="featires-item">
-                    <b class="featires-item">НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
+                    <b>НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
                     <p>№3</p>
                     <p>ВСЕ ДОСТОПРЕМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</p>  
                </li>
                 <li class="featires-item">
-                    <b class="featires-item">КРАСИВАЯ ДОРОГА</b>
+                    <b>КРАСИВАЯ ДОРОГА</b>
                     <p>№4</p>
                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</p>  
                 </li>
                 <li class="featires-item">
-                    <b class="featires-item">МАЛО ТУРИСТОВ</b>
+                    <b>МАЛО ТУРИСТОВ</b>
 	                <p>№5</p>
                     <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПИТСЯ ТАМ</p>
                 </li>
@@ -112,8 +113,8 @@
 	<div class="motto-sedon">
 		<h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
         <p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
-        <div class="search-head">
-            <a href="#"><h2 class="index-conent-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2></a> 
+        <div class="search-head btn-brown">
+            <a href="#"><h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2></a> 
         </div>
     </div>
 	<div class="search">
@@ -126,11 +127,11 @@
                     <label for="date-of-departure">ДАТА ВЫЕЗДА:</label><input type="text" name="time" value="" placeholder="ДАТА" id="date-of-departure">
 				</p>
 				<p class="old">
-                    <label for="adults">ВЗРОСЛЫЕ</label>
+                    <label for="adults">ВЗРОСЛЫЕ:</label>
 					<input type="numder" name="" value="" placeholder="0" id="adults">
 				</p>
 				<p class="yung">
-                    <label for="children">ДЕТИ</label>
+                    <label for="children">ДЕТИ:</label>
 					<input type="tel" name="phone" value="" placeholder="0" id="children">
                 </p>
                 <p class="search-find">
@@ -151,12 +152,13 @@
 		</section>
 		<section class="footer-social">
             <ul>
-                <li><a class="social-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
-                <li><a class="social-btn" href="#">Фейсбук</a></li>
-                <li><a class="social-btn" href="#">Юутуб</a></li>
+                <li><a class="social-btn tv-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
+                <li><a class="social-btn fc-btn" href="#">Фейсбук</a></li>
+                <li><a class="social-btn yu-btn" href="#">Юутуб</a></li>
             </ul>
 		</section>
 		<div class="footer-copyright">
+            <p>WEBSITE BY</p>
 			<a href="https://htmlacademy.ru/">
             <!--Тут будет лого академии-->
 			</a>  
