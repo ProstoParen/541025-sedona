@@ -87,18 +87,21 @@ a {
     text-align: center;
 }
 
-.index-content{
+.index-content,
+.more-info{
     background-color: #81b3d2; 
     color: white;
 }
 
-.index-content-left h2 {
+.index-content-left h2,
+.hotel-found h3{
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
 }
 
-.index-content-left p {
+.index-content-left p,
+.hotel-found span{
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -197,17 +200,19 @@ a {
     font-weight: bold;
 }
 
-/* Хм, а как внутри формы сделать текст жирным? Надо погуглить... */
-/* Не работает */
-.search-form input[type="text"],
-.search-form input[type="number"],
-.search-form input[type="tel"]{
-    font: inherit;
-    color: #000000;
-    text-transform: uppercase;
-    
-    background-color: white;
-    border: none;
+
+/* .Cтилизовал, но с кнопками запара, помню что у академии был урок с этой темой но немогу найти, а гугл выдает даболее странные решения.. */
+input {
+    background-image: url(/img/calendar.svg);   
+    background-repeat: no-repeat;    
+    background-position: 4px; 
+    outline: none;   
+    padding-left: 20px;   
+    height: 20px; 
+    font-size: 14px; 
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border: 0px;
 }
 
 .search .btn {
@@ -218,6 +223,15 @@ a {
     border: none;
     background-color: #81b3d2;
 }
+/* не работает( стилизовать их и календарик  с помощью hover не вижу смысла пока они не работают*/
+/* .children input::before{
+    background-image: url(/img/icon-down-dir.svg);
+}
+
+.children input::after{
+    background-image: url(/img/icon-up-dir.svg);
+} */
+
 
 .main-footer {
     list-style: none;
@@ -281,4 +295,129 @@ a {
 
 .footer-copyright a:active{
     color: rgba(0,0,0,.3);
+}
+
+/* 2 страница */
+
+.filters-form {
+    background-color: #000000;
+    background-image: url(/img/filters-logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.filters-form legend {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.filters-form label {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+}
+/* Нужно стилизовать четбоксы, но я не знаю как */
+.sorting ul{
+    list-style: none;
+}
+
+.sorting p{
+    text-align: center;
+    color: #000000;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal;
+    list-style: none;
+}
+
+.sorting a{
+    color: rgba(0,0,0,.3);
+    border-bottom: dashed;
+}
+
+.sorting a:hover{
+    color: #81b3d2;
+    border-bottom: dashed;
+}
+
+.sorting a:focus{
+    color: #81b3d2;
+}
+
+.sorting a:active{
+    color: #000000;
+    border-bottom: none;
+}
+
+/* Как изменить цвет у SVG? */
+.dir-up{
+    background-image: url(/img/icon-up-dir.svg);  
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 11px;
+    height: 10px;
+    color: #81b3d2; 
+}
+
+.dir-down{
+    background-image: url(/img/icon-down-dir.svg);  
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 11px;
+    height: 10px;
+    color: #cacaca;
+}
+
+.dir-down a:hover{
+    color: #000000;
+}
+
+.dir-down a:focus{
+    color: #81b3d2;
+}
+
+.dir-down a:active{
+    color: rgba(0,0,0,.3);
+}
+
+
+
+.booking {
+    background-color: #766357; 
+    text-align: center;
+}
+
+.booking a,
+.more-info a{
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.rating p {
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+    background-color: #f2f2f2;
+}
+
+.hotel{
+    list-style: none;
+}
+
+.staars {
+    background-image: url(/img/star.svg);
+    width: 17px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat; 
 }
