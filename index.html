@@ -5,10 +5,10 @@
 <title>Седона</title>
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 <link href="css/normalize.css" rel="stylesheet">
-<link href="css/Untitled-1.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="wrapper"><!-- Обернуть все в див для тени--><!-- Обернуть все в див -->
+<div class="wrapper">
 <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
@@ -23,10 +23,10 @@
             <a href="#">КАРТА ШТАТА</a>
           </li>
           <li>
-            <a href="#">ГОСТИНИЦЫ</a>
+            <a href="hotels.html">ГОСТИНИЦЫ</a>
           </li>
           <li class="logo">
-            <a href="#"><img src="img/logo-sedona.svg" width="135" height="71" alt="Логотип города Sedona"></a>  
+            <a href="index.html"><img src="img/logo-sedona.svg" width="135" height="71" alt="Логотип города Sedona"></a>  
           </li>
         </ul>
       </nav>
@@ -36,13 +36,11 @@
     <div class="index-logo"> 
         <!-- Здесь будет фоновое изображение -->
         <h1 class="visually-hidden">Sedona</h1>
+        <!-- Поиграть размерами -->
         <div class="welcome"><img src="img/intro-welcome.svg" width="1200" height="510" alt="Welcome to the gorgeus Sedona"></div>
-        <div class="float-border">
-        <!--Сlелать фоновым (фикс высота и 100%ширина псевдоэлемента и да это SVG)-->
-        </div>
     </div>
-    <section class="deviz">
-        <div class="deviz-sedon"> 
+    <section class="intro">
+        <div class="intro-sedon"> 
            <h2>СЕДОНА - НЕБОЛЬШОЙ ГОРОДОК В АРИЗОНЕ, ЗАСЛУЖИВАЮЩИЙ БОЛЬШЕГО!</h2>
            <p>РАССМОТРИМ 5 ПРИЧИН, ПО КОТОРЫМ СЕДОНА КРУЧЕ, ЧЕМ ГРАНД КАНЬОН!</p>  
            </div>
@@ -56,52 +54,47 @@
                     <p>СЕДОНА -  НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
                 </div>
                 <div class="index-content-right">
-                    <div class="galery-conent">
-                     <img src="img/real-town.jpg" alt="Настоящий городок" width="800" height="258">
-                    </div>
+                    <img src="img/real-town.jpg" alt="Настоящий городок" width="800" height="258">
                 </div>  
             </div>
             <ul class="features"> 
-               <li class="featires-item">
-			        <div class="housing"><!--Изображения вставлю фоном--></div>
+               <li class="housing">
 	                <b>ЖИЛЬЁ</b>
 	                <p>РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ МОТЕЛЕ, ВСЕ КАК В КИНО!</p>  
                 </li>
-                <li class="featires-item">
-	    		    <div class="food"></div>
+                <li class="food">
                     <b>ЕДА</b>
 	                <p>ВСЕГДА ЗАКАЗЫВАЙТЕ ФИРМЕННЫЙ БУРГЕР. ВЫ НЕ РАЗОЧАРУЕТЕСЬ!</p>  
                 </li>
-	            <li class="featires-item">
-                    <div class="suvenir"></div>
+	            <li class="suvenir">
 	                <b>СУВЕНИРЫ</b>
 	                <p>НЕ ТОЛЬКО КИТАЙСКОГО, НО И МЕСТНОГО ПРОИЗВОДСТВА</p>  
                 </li>
             </ul>
         </article>
         <article class="devil-bridge">
-            <div class="index-content">
-                <div class="index-content-left">
-                    <img src="img/devil-bridge.jpg" width="800" height="258" alt="Мост Дьявола">
-	            </div>
-                <div class="index-content-right">
-	               <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
-	               <p>-№2-</p> 
-                   <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
-                </div>
-            </div>
+                <div class="index-content">
+                    <div class="index-content-left">
+                            <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
+                             <p>-№2-</p> 
+                            <p>ДА, ПО НЕМУ МОЖНО ПРОТИ! ЕСЛИ КОНЕЧНО ВЫ ОСМЕЛИТЕСЬ</p> 
+                        </div>
+                        <div class="index-content-right">
+                            <img src="img/devil-bridge.jpg" width="800" height="258" alt="Мост Дьявола">
+                        </div>  
+                    </div>
             <ul class="features">
-               <li class="featires-item">
+               <li>
                     <b>НЕБОЛЬШАЯ ПЛОЩАДЬ</b>
                     <p>№3</p>
                     <p>ВСЕ ДОСТОПРЕМЕЧАТЕЛЬНОСТИ НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</p>  
                </li>
-                <li class="featires-item">
+                <li>
                     <b>КРАСИВАЯ ДОРОГА</b>
                     <p>№4</p>
                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ НЕ СКУЧНО!</p>  
                 </li>
-                <li class="featires-item">
+                <li>
                     <b>МАЛО ТУРИСТОВ</b>
 	                <p>№5</p>
                     <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН И ТОЛПИТСЯ ТАМ</p>
@@ -113,7 +106,7 @@
 	<div class="motto-sedon">
 		<h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
         <p>УКАЖИТЕ ПРЕДПАЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>  
-        <div class="search-head btn-brown">
+        <div class="search-head">
             <a href="#"><h2>ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2></a> 
         </div>
     </div>
@@ -146,7 +139,7 @@
 	<div class="maps">  
 		<img src="img/maps.jpg" width="1200" height="475" alt="США, штат Аризона, Седона">
 	</div> 
-	<div class="container">
+	<div class="container flex">
 		<section class="footer-contacts"> 
 		    <p class="featires-item">#VISITSEDONA</p>
 		</section>
@@ -159,9 +152,9 @@
 		</section>
 		<div class="footer-copyright">
             <p>WEBSITE BY</p>
-			<a href="https://htmlacademy.ru/">
-            <!--Тут будет лого академии-->
-			</a>  
+            <div>
+                <a href="https://htmlacademy.ru/"><span class="visually-hidden">htmlacademy</span></a> 
+            </div> 
 		</div>  
     </div>
 </footer>

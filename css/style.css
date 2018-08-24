@@ -1,41 +1,79 @@
 @charset "utf-8";
 /* CSS Document */
-/* в штмл подключить шрифты и нормалайз */
-/* Для боди прописывать те параметры текста которых больше всего в объеме сайта */
-/* ЛЕЗЬ В ДЕМКУ БАБРБЕШОПа И СМОТРИ КАК ТАМ! */
-/* Разная стилизация для страниц делается через ИНЕР пейдж, т.е. доп класс к боди на внутренних страницах */
-/* В селекторах максимум три тега */
-
+/* ОНУЛИТЬ ПАДИНГИ У РОДИТЕЛЬСКИХ ЕЛЕМЕНТОВ! */
+/* Проверить у неработающих элементов тип, а то может применяю блочные свойства к строчным элементам */
 body {
-    margin: 0;
-    padding: 0;
-    
+    min-width: 1200px;
+
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
     color: #333333;
     text-transform: uppercase;
-
-    background-color: #ffffff;
+    background-color: #f2f2f2; 
 }
 
 a {
    text-decoration: none;
 }
 
+.wrapper {
+    width: 1200px;
+    margin: 0px auto;
+}
+
 .main-navigation {
     font-size: 14px;
     line-height: 26px;
+    list-style: none;
     font-weight: bold;
     color: #000000;
   
     background-color: #ffffff;
+    height: 56px;    
 }
 
+/* Делаю навигацию флексами */
 .site-navigation {
     list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
+
+.site-navigation li:nth-child(1){
+    order: 1;
+}
+
+.site-navigation li:nth-child(2){
+    order: 2;
+}
+
+.site-navigation li:nth-child(3){
+    order: 4;
+}
+.site-navigation li:nth-child(4){
+    order: 5;
+}
+
+.logo{
+    order: 3;
+}
+
+.logo a{
+    display: block;
+    height: 71px;
+}
+
+
+
+/* Как поставить логотип в середину? */
+/* Задаю флексам ширину */
+.site-navigation li{
+    flex-shrink: 0;
+}
+
 
 .site-navigation a {
     color: #000000;
@@ -45,56 +83,78 @@ a {
     color: #81b3d2;
 }
 
-.site-navigation a:focus{
+a.active{
     color: #766357;
 }
 
 .site-navigation a:active{
-    color: rgba(0,0,0,.3);
+    color: rgba(0,0,0, 0.3);
 }
 
+/* Задаю лого */
 .index-logo{
-    background-color: #000000;
-    background-image: url(/img/background\ photo.jpg);
+    background-color: #e3f0f8;
+    background-image: url(../img/bp.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.float-border {
-    background-color: #000000;
-    background-image: url(/img/intro-mask.svg);
-    background-position: bottom center;
-    background-repeat: no-repeat; 
-    height: 59px;
+.index-logo::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    background-image: url(../img/intro-mask.svg);
+    background-repeat: no-repeat;
     width: 100%;
+    height: 69px;
+    background-position: center;
+    background-size: cover;
 }
 
-.deviz-sedon {
+.welcome{
     text-align: center;
 }
 
-.deviz-sedon h2 {
-    font-size: 21px;
-    line-height: 26px;
+
+.intro {
+    background-color: #ffffff;
+    text-align: center;
 }
 
-.deviz-sedon p {
+.intro h2 {
+    font-size: 21px;
+    line-height: 26px;
+    margin: 0px;
+}
+
+.intro-sedon p {
     font-size: 14px;
     line-height: 26px;
+    margin: 0px;
 }
 
 .advantages {
     text-align: center;
 }
 
-.index-content,
+.index-content-left,
 .more-info{
     background-color: #81b3d2; 
     color: white;
 }
 
+.intro{
+    /* Задать размеры через паддинг */
+}
+
 .index-content-left h2,
 .hotel-found h3{
+    margin: 0px;
+
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
@@ -181,18 +241,6 @@ a {
     line-height: 26px;
 }
 
-/* НЕ РАБОТАЕТ! Пока еще не разобрался почему */
-.btn-brown a:hover{
-    background-color: #604e43;
-}
-
-.btn-brown a:active{
-    color: rgba(0,0,0,.3);
-    background-color: #503e33;    
-}
-
-
-/*  */
 
 .search p{
     font-size: 14px;
@@ -281,21 +329,50 @@ input {
     font-weight: normal;
 }
 /* Если вставляю в "а" ничего не отображается  */
-.footer-copyright {
+.footer-copyright div{
     background-image: url(/img/logo-htmlacademy.svg);
     width: 115px;
     height: 41px;
     background-position: center;
     background-repeat: no-repeat; 
 }
+
 /* Естественно не работает */
-.footer-copyright a:hover{
+
+.footer-copyright a {
+    display: block;
+    width: 115px;
+    height: 41px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-image: url(/img/logo-htmlacademy.svg);
+    color: #000000;
+}
+
+/* Спрятал */
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+  
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+/* от тута чет сложно */
+/* .footer-copyright a:hover{
     color: #81b3d2;
 }
 
 .footer-copyright a:active{
     color: rgba(0,0,0,.3);
-}
+} */
 
 /* 2 страница */
 
@@ -400,6 +477,36 @@ input {
     line-height: 21px;
     font-weight: bold;
 }
+/* Методом тыка выяснил что если поменять а на р все работает \_О_о_/ */
+.more-info p:hover{
+    background-color: #669ec0;
+}
+
+.more-info p:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+}
+
+.booking p:hover,
+.search-head h2:hover{
+    background-color: #604e43;
+}
+
+.booking p:active,
+.search-head h2:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
+}
+
+/* Я почти уверен что это ссылка */
+.hotel-found h3:hover{
+    color: #81b3d2;
+}
+
+.hotel-found h3:active{
+    color: rgba(0,0,0,.3);
+}
+
 
 .rating p {
     text-align: center;
@@ -421,3 +528,8 @@ input {
     background-position: center;
     background-repeat: no-repeat; 
 }
+
+
+/* ---------СЕТОЧНЫЕ СТИЛИ----------- */
+
+
