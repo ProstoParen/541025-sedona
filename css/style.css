@@ -31,7 +31,7 @@ a {
     color: #000000;
   
     background-color: #ffffff;
-    height: 56px;    
+    height: 56px;   
 }
 
 /* Делаю навигацию флексами */
@@ -40,6 +40,8 @@ a {
     display: flex;
     margin: 0px;
     padding: 0px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .site-navigation li:nth-child(1){
@@ -63,12 +65,11 @@ a {
 
 .logo a{
     display: block;
-    height: 71px;
+    height: 56px;
 }
 
 
-
-/* Как поставить логотип в середину? */
+/* Кстати лого все же не по центру */
 /* Задаю флексам ширину */
 .site-navigation li{
     flex-shrink: 0;
@@ -94,11 +95,14 @@ a.active{
 /* Задаю лого */
 .index-logo{
     background-color: #e3f0f8;
-    background-image: url(../img/bp.jpg);
+    background-image: url(../img/index-logo.jpg); /* Заменил на картинку в высоком разрешении, старая сыпалась, и кстати именно она закрывает лого */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    
+    background-position: 0px -84px; /* Иначе в фон я не попадаю! */
 }
 
 .index-logo::after{
@@ -109,42 +113,88 @@ a.active{
     display: block;
     background-image: url(../img/intro-mask.svg);
     background-repeat: no-repeat;
-    width: 100%;
-    height: 69px;
+
+    width: 100%; /* Костыли костылики */
+    height: 57px;
+    
     background-position: center;
     background-size: cover;
 }
 
 .welcome{
     text-align: center;
+    padding-top: 75px;
+    padding-bottom: 73px;  /*Вот тут спорно */
+    background-color: transparent;
 }
 
 
 .intro {
+    display: flex;
+    justify-content: center;
+
     background-color: #ffffff;
     text-align: center;
+
+    padding-top: 60px;
 }
+.intro-sedon{
+    width: 615px;   /*Костыль который не работает! */
+}
+
 
 .intro h2 {
     font-size: 21px;
     line-height: 26px;
     margin: 0px;
+
+    padding-bottom: 27px;
 }
 
 .intro-sedon p {
     font-size: 14px;
     line-height: 26px;
     margin: 0px;
+
+    padding-bottom: 52px;
 }
 
 .advantages {
     text-align: center;
 }
 
+.index-content{
+    display: flex;
+
+    height: 256px;
+}
+.index-content-left{
+    width: 400px;
+}
+
+.index-content-left h2{
+    margin-left: auto;  /*Костыль который работает! */
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 5px; /*Костыль который работает и помогает попасть по высоте но не по ширине! */
+    width: 200px;    
+    padding-top: 45px;
+}
+
+.index-content-left p{
+    margin-left: auto; /*Костыль который работает! */
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 280px;
+    padding-top: 20px;
+}
+/*------------------------------------------------------ОТ ТУТ ЗАКОНЧИЛ 25.08.18------------------------------------------------------------------------ */
 .index-content-left,
 .more-info{
     background-color: #81b3d2; 
     color: white;
+
 }
 
 .intro{
@@ -153,8 +203,6 @@ a.active{
 
 .index-content-left h2,
 .hotel-found h3{
-    margin: 0px;
-
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
