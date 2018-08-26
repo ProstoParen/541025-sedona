@@ -61,6 +61,7 @@ a {
 
 .logo{
     order: 3;
+    z-index: 1; /* Вот тут магия*/
 }
 
 .logo a{
@@ -124,7 +125,7 @@ a.active{
 .welcome{
     text-align: center;
     padding-top: 75px;
-    padding-bottom: 73px;  /*Вот тут спорно */
+    padding-bottom: 73px; 
     background-color: transparent;
 }
 
@@ -173,13 +174,15 @@ a.active{
 }
 
 .index-content-left h2{
-    margin-left: auto;  /*Костыль который работает! */
+    margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    margin-bottom: 5px; /*Костыль который работает и помогает попасть по высоте но не по ширине! */
+    margin-bottom: 5px; 
     width: 200px;    
     padding-top: 45px;
 }
+
+
 
 .index-content-left p{
     margin-left: auto; /*Костыль который работает! */
@@ -195,6 +198,16 @@ a.active{
     background-color: #81b3d2; 
     color: white;
 
+}
+
+.index-content-right{
+    flex-shrink: 0;
+}
+
+.index-content-right img{ /*---Все равно изображение не попадает в pp---- */
+    object-fit: cover;
+    
+    height: 256px;
 }
 
 .intro{
@@ -216,8 +229,17 @@ a.active{
 }
 
 .features {
+    display: flex;
     text-align: center;
     list-style: none;
+
+    margin: 0px;
+    padding: 0px;
+    height: 329px;
+}
+
+.features.bottom{
+    height: 255px;
 }
 
 .features b{
@@ -233,7 +255,7 @@ a.active{
 }
 
 .housing {
-    background-image: url(/img/icon-1.svg);
+    background-image: url(../img/icon-1.svg);     /* Как коректно отобразить? */
     width: 72px;
     height: 75px;
     background-position: center;
@@ -241,7 +263,7 @@ a.active{
 }
 
 .food {
-    background-image: url(/img/icon-2.svg);
+    background-image: url(../img/icon-2.svg);
     width: 72px;
     height: 75px;
     background-position: center;
@@ -249,7 +271,7 @@ a.active{
 }
 
 .suvenir {
-    background-image: url(/img/icon-3.svg);
+    background-image: url(../img/icon-3.svg);
     width: 72px;
     height: 75px;
     background-position: center;
@@ -260,46 +282,86 @@ a.active{
     background-color: #eeeeee; 
 }
 
+.bottom li{
+    padding-top: 48px;
+    width: 400px;
+}
+
+.bottom p{
+    width: 226px;
+}
+
 .motto-sedon {
     background-color: white; 
     text-align: center;
+
+    height: 292px;
 }
 
 .motto-sedon h2 {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
+
+    margin: 0px;
+    padding-top: 51px;
 }
 
 .motto-sedon p {
     font-size: 14px;
     line-height: 24px;
     font-weight: normal;
+
+    margin: 0px;
+    padding-top: 25px;
 }
 
 .search-head {
     background-color: #766357; 
     text-align: center;
+
+    width: 568px;
+    height: 86px;
 }
 
 .search-head h2{
-    text-align: center;
+    text-align: center; 
     color: #ffffff;
     font-size: 21px;
     line-height: 26px;
 }
 
+.search{
+    display: flex;
+    justify-content: center;
+}
+
+div .serch-form {
+    width: 568px;
+    height: 395px;
+
+    background-color: #ffffff;
+}
+
+.search-date{
+    padding-top: 60px;
+}
 
 .search p{
+    padding-bottom: 29px;
+
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
+
+    text-align: center;
+    margin: 0px;
 }
 
 
 /* .Cтилизовал, но с кнопками запара, помню что у академии был урок с этой темой но немогу найти, а гугл выдает даболее странные решения.. */
 input {
-    background-image: url(/img/calendar.svg);   
+    background-image: url(../img/calendar.svg);   
     background-repeat: no-repeat;    
     background-position: 4px; 
     outline: none;   
@@ -336,6 +398,8 @@ input {
     line-height: 26px;
     font-weight: bold;
     color: #000000;
+    background-color: rgba(253,253,253,0.9);
+    padding: 36px 0;
 }
 
 .footer-social ul{
@@ -348,7 +412,7 @@ input {
 }
 
 .tv-btn {
-    background-image: url(/img/twitter.svg);
+    background-image: url(../img/twitter.svg);
     width: 12px;
     height: 22px;
     background-position: center;
@@ -356,7 +420,7 @@ input {
 }
 
 .fc-btn {
-    background-image: url(/img/fb-icon.svg);
+    background-image: url(../img/fb-icon.svg);
     width: 12px;
     height: 22px;
     background-position: center;
@@ -364,13 +428,32 @@ input {
 }
 
 .yu-btn {
-    background-image: url(/img/youtube.svg);
+    background-image: url(../img/youtube.svg);
     width: 12px;
     height: 22px;
     background-position: center;
     background-repeat: no-repeat; 
 }
- 
+
+.container.flex{
+    display: flex;
+    padding-left: 135px;
+}
+
+.footer-contacts{
+    width: 160px;
+    margin-right: 250px;
+}
+
+.footer-social{
+    width: 170px;
+}
+
+.footer-copyright{
+    width: 210px;
+    margin-left: auto;
+}
+
 .footer-copyright p{
     font-size: 14px;
     line-height: 26px;
@@ -378,7 +461,7 @@ input {
 }
 /* Если вставляю в "а" ничего не отображается  */
 .footer-copyright div{
-    background-image: url(/img/logo-htmlacademy.svg);
+    background-image: url(../img/logo-htmlacademy.svg);
     width: 115px;
     height: 41px;
     background-position: center;
@@ -393,7 +476,7 @@ input {
     height: 41px;
     background-position: center;
     background-repeat: no-repeat; 
-    background-image: url(/img/logo-htmlacademy.svg);
+    background-image: url(../img/logo-htmlacademy.svg);
     color: #000000;
 }
 
@@ -424,11 +507,51 @@ input {
 
 /* 2 страница */
 
-.filters-form {
+.found{
+    background-color: #fefefe;
+}
+
+.found ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.filters{
+ height: 220px;
+}
+
+.filters-form form{
+    display: flex;
+
+    height: 217px;
+
     background-color: #000000;
-    background-image: url(/img/filters-logo.jpg);
+    background-image: url(../img/filters-logo.jpg);
     background-position: center;
     background-repeat: no-repeat;
+
+}
+
+.filters-form fieldset { /* А как разместить четбоксы и подписи к ним на одной строчке?  */
+    display: flex;
+    flex-direction: column;
+
+    border:0 none;
+    }
+
+.infrastructure{
+    width:240px;
+}
+
+.accommodation {
+    width:240px;
+}
+
+.value {
+    width:400px;
+    background-color: red;
+
+    margin-left: auto;
 }
 
 .filters-form legend {
@@ -447,12 +570,26 @@ input {
     font-weight: normal;
 }
 /* Нужно стилизовать четбоксы, но я не знаю как */
+
+.sorting {
+    display: flex;
+
+    height: 83px;
+
+    border-bottom: 1px solid #e5e5e5; 
+}
+
+.sorting h2{
+    margin: 0px;
+}
 .sorting ul{
+    margin: 0px;
     list-style: none;
 }
 
 .sorting p{
     text-align: center;
+    margin: 0px;
     color: #000000;
     font-size: 12px;
     line-height: 18px;
@@ -461,7 +598,7 @@ input {
 }
 
 .sorting a{
-    color: rgba(0,0,0,.3);
+    color: rgba(0,0,0,0.3);
     border-bottom: dashed;
 }
 
@@ -479,22 +616,30 @@ input {
     border-bottom: none;
 }
 
-/* Как изменить цвет у SVG? */
+/* Как изменить цвет у SVG!!!? */
 .dir-up{
-    background-image: url(/img/icon-up-dir.svg);  
+    background-image: url(../img/icon-up-dir.svg);  
+    
     background-position: center;
     background-repeat: no-repeat; 
     width: 11px;
     height: 10px;
+    
+    border: none; 
+    background-color: #fefefe;
     color: #81b3d2; 
 }
 
 .dir-down{
-    background-image: url(/img/icon-down-dir.svg);  
+    background-image: url(../img/icon-down-dir.svg);  
+
     background-position: center;
     background-repeat: no-repeat; 
     width: 11px;
     height: 10px;
+
+    border: none;
+    background-color: #fefefe;
     color: #cacaca;
 }
 
@@ -510,7 +655,40 @@ input {
     color: rgba(0,0,0,.3);
 }
 
+.hotel-found{
+    display: flex;
 
+    height: 120px;
+
+    border-bottom: 1px solid #e5e5e5;
+    border-collapse: collapse;
+
+    padding-top: 30px;
+    padding-left: 72px;  
+}
+
+.hotel-picture{
+    padding-right: 30px;
+}
+
+.hotel-found h3,
+.hotel-found div,
+.hotel-found p{
+    margin: 0px;
+}
+
+.hotel-found .staars,
+.hotel-found .rating{
+    /* margin-left: auto;  Бяка*/
+}
+
+.hotel-found .more-info{
+    width: 110px;
+}
+
+.hotel-found .booking{
+    width: 142px;
+}
 
 .booking {
     background-color: #766357; 
@@ -536,12 +714,12 @@ input {
 }
 
 .booking p:hover,
-.search-head h2:hover{
+.search-head:hover{
     background-color: #604e43;
 }
 
 .booking p:active,
-.search-head h2:active{
+.search-head:active{
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
 }
@@ -570,7 +748,7 @@ input {
 }
 
 .staars {
-    background-image: url(/img/star.svg);
+    background-image: url(../img/star.svg);
     width: 17px;
     height: 18px;
     background-position: center;

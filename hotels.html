@@ -39,19 +39,19 @@
             <h2 class="visually-hidden">Фильтр гостиниц</h2>
             <div class="filters-form"> <!--Тут будет фоновое изображение-->
                 <form action="" method="get">
-                    <fieldset class="">
+                    <fieldset class="infrastructure">
                         <legend>ИНФРАСТРУКТУРА:</legend>
                         <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field"> БАССЕЙН</label> <!--Cами чеки экспортировать в двух состояниях как изображения и скрыть через визуал хиден что бы поменять на другой-->
                         <input type="checkbox" name="parking" id="parking-field"><label for="parking-field"> ПАРКОВКА</label>
                         <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field"> WI-FI</label>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="accommodation">
                         <legend>ТИП ЖИЛЬЯ</legend>
                         <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field"> ГОСТИНИЦА</label>
                         <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field"> МОТЕЛЬ</label>
                         <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field"> АПАРТАМЕНТЫ</label>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="value">
                         <!-- Тут будет бегунок со стоимостью -->
                     </fieldset>
                 </form> 
@@ -61,7 +61,7 @@
     <section class="found">
         <div class="container-smaal"> 
         <div class="sorting">
-            <h2>НАЙДЕНО</h2>
+            <h2>НАЙДЕНО: 3</h2>
             <p>СОРТИРОВКА:</p>
             <ul>
                 <li>
@@ -79,10 +79,8 @@
             </div>
             <div class="arrow">
                 <button class="dir-up" type="submit" width="" height="">
-                    <img src="#"alt="Сортировка по возрастанию">
                 </button>
                 <button class="dir-down" type="submit" width="" height="">
-                        <img src="#"alt="Сортировка по убыванию">
                 </button>
             </div>
         </div>
@@ -170,9 +168,9 @@
         </section>
         <section class="footer-social">
             <ul>
-                <li><a class="social-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
-                <li><a class="social-btn" href="#">Фейсбук</a></li>
-                <li><a class="social-btn" href="#">Юутуб</a></li>
+                <li><a class="social-btn tv-btn" href="#">Твитер</a></li> <!--Текст потом спрячу-->
+                <li><a class="social-btn fc-btn" href="#">Фейсбук</a></li>
+                <li><a class="social-btn yu-btn" href="#">Юутуб</a></li>
             </ul>
         </section>
         <div class="footer-copyright">
