@@ -230,16 +230,25 @@ a.active{
 
 .features {
     display: flex;
+    justify-content: space-around;
     text-align: center;
     list-style: none;
 
     margin: 0px;
     padding: 0px;
-    height: 329px;
+    padding-top: 60px;
+    min-height: 270px;
 }
 
-.features.bottom{
-    height: 255px;
+.features-item {
+    background-size: 75px 72px; 
+    
+    flex-shrink: 0;
+    background-position: center top;
+    background-repeat: no-repeat; 
+    width: 300px;
+
+    padding-top: 104px;
 }
 
 .features b{
@@ -256,26 +265,14 @@ a.active{
 
 .housing {
     background-image: url(../img/icon-1.svg);     /* Как коректно отобразить? */
-    width: 72px;
-    height: 75px;
-    background-position: center;
-    background-repeat: no-repeat; 
 }
 
 .food {
-    background-image: url(../img/icon-2.svg);
-    width: 72px;
-    height: 75px;
-    background-position: center;
-    background-repeat: no-repeat; 
+    background-image: url(../img/icon-3.svg);
 }
 
 .suvenir {
-    background-image: url(../img/icon-3.svg);
-    width: 72px;
-    height: 75px;
-    background-position: center;
-    background-repeat: no-repeat; 
+    background-image: url(../img/icon-2.svg);
 }
 
 .devil-bridge {
@@ -283,15 +280,28 @@ a.active{
 }
 
 .bottom li{
-    padding-top: 48px;
-    width: 400px;
+    flex-shrink: 0;
+    padding-top: 0px;
+    min-width: 400px;
 }
 
 .bottom p{
-    width: 226px;
+    padding-top: 20px;
+}
+
+
+.bottom p{
+    margin: 0 auto;
+    width: 255px;
+}
+
+.bottom{
+    padding-top: 45px;
+    min-height: 210px;
 }
 
 .motto-sedon {
+    position: relative;
     background-color: white; 
     text-align: center;
 
@@ -317,28 +327,32 @@ a.active{
 }
 
 .search-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #766357; 
     text-align: center;
 
     width: 568px;
     height: 86px;
+
+    margin: 50px auto 0;
 }
 
-.search-head h2{
+.search-head a{
     text-align: center; 
     color: #ffffff;
     font-size: 21px;
     line-height: 26px;
+    font-weight: bold;
 }
 
-.search{
-    display: flex;
-    justify-content: center;
-}
-
-div .serch-form {
+.search-form {
+    position: absolute;
     width: 568px;
     height: 395px;
+    left: calc(50% - (568px/2));
 
     background-color: #ffffff;
 }
@@ -347,7 +361,7 @@ div .serch-form {
     padding-top: 60px;
 }
 
-.search p{
+.search-form p{
     padding-bottom: 29px;
 
     font-size: 14px;
@@ -373,7 +387,7 @@ input {
     border: 0px;
 }
 
-.search .btn {
+.search-form .btn {
     text-align: center;
     color: #ffffff;
     font-size: 21px;
@@ -399,7 +413,6 @@ input {
     font-weight: bold;
     color: #000000;
     background-color: rgba(253,253,253,0.9);
-    padding: 36px 0;
 }
 
 .footer-social ul{
@@ -408,41 +421,42 @@ input {
 
 /* А как лучше всего спрятать надписи? */
 .social-btn {
+    display: block;
+    text-indent: -9999px;
     background-color: #81b3d2;
+    background-size: 12px 22px;
+    width: 46px;
+    height: 46px;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.footer-social ul{
+    display: flex;
 }
 
 .tv-btn {
-    background-image: url(../img/twitter.svg);
-    width: 12px;
-    height: 22px;
-    background-position: center;
-    background-repeat: no-repeat; 
+    background-image: url(../img/twitter.svg); /* Подогнать размеры как в макете*/
+    background-size: 12px 22px;
 }
 
 .fc-btn {
     background-image: url(../img/fb-icon.svg);
-    width: 12px;
-    height: 22px;
-    background-position: center;
-    background-repeat: no-repeat; 
 }
 
 .yu-btn {
     background-image: url(../img/youtube.svg);
-    width: 12px;
-    height: 22px;
-    background-position: center;
-    background-repeat: no-repeat; 
 }
 
 .container.flex{
     display: flex;
-    padding-left: 135px;
+    width: 1065px;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 .footer-contacts{
+    
     width: 160px;
-    margin-right: 250px;
 }
 
 .footer-social{
@@ -451,7 +465,6 @@ input {
 
 .footer-copyright{
     width: 210px;
-    margin-left: auto;
 }
 
 .footer-copyright p{
