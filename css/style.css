@@ -17,6 +17,10 @@ body {
 a {
    text-decoration: none;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 .wrapper {
     width: 1200px;
@@ -453,7 +457,7 @@ input {
 }
 
 .main-footer-inner{
-    min-height: 120px;
+    height: 120px;
     padding-top: 28px;
 }
 
@@ -598,16 +602,64 @@ svg path {
     margin: 0 auto;
 }
 
+
+.infrastructure,
+.accommodation{
+    padding: 0px;
+    margin: 0px;
+}
+
 .filters-form form{
     padding-top: 26px;
     display: flex;
 }
 
-.filters-form fieldset { /* А как разместить четбоксы и подписи к ним на одной строчке?  */
+.filters-form fieldset { 
     display: flex;
     flex-direction: column;
 
     border:0 none;
+}
+
+.filters-form legend {
+    padding-bottom: 27px;
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+
+.filters-form label {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
+/* Стилизация четбоксов */
+.filters-form label{
+    padding-left: 40px;
+
+    width: 110px;
+    height: 23px;
+
+    padding-bottom: 23px;
+}
+.filters-form input[type="checkbox"] {
+    display:none;
+}
+
+.filters-form input[type="checkbox"] + label{
+    display:inline-block;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    background: url(../img/checkbox-off.svg) left top no-repeat;
+    cursor: pointer;
+}
+
+.filters-form input[type="checkbox"]:checked + label{
+    background: url(../img/checkbox-on.svg) left top no-repeat;
 }
 
 .infrastructure{
@@ -761,24 +813,10 @@ svg path {
     background: #ffffff;
 }
 
-.filters-form legend {
-    text-align: center;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 21px;
-    font-weight: bold;
-}
-
-.filters-form label {
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: normal;
-}
-
-.container-smaal{
+.container-smaal {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 
     width: 1056px;
 
@@ -786,17 +824,20 @@ svg path {
 }
 /* -------------------------------------30/08/18--------------------------------------- */
 .sorting {
-    height: 83px;
+    display: flex;
+    align-items: center;
 
+    min-height: 86px;
     border-bottom: 1px solid #e5e5e5; 
 }
 
 .sorting h2{
-    margin: 0px;
+    margin-right: 49px;
 }
 
 .sorting ul{
     display: flex;
+
     margin: 0px;
     list-style: none;
 }
@@ -815,9 +856,22 @@ svg path {
     font-size: 12px;
     line-height: 18px;
     color: rgba(0,0,0,0.3);
-    border-bottom: dashed;
+    border-bottom: 1px dotted;
 }
 
+.price{
+    margin-left: 40px;
+}
+
+.type{
+    margin-left: 30px;
+}
+
+.raiting{
+    margin-left: 33px;
+}
+
+/* А как оформить "активный" из стил гайда? */
 .sorting a:hover{
     color: #81b3d2;
     border-bottom: dashed;
@@ -832,12 +886,17 @@ svg path {
     border-bottom: none;
 }
 
+.arrow{
+    margin-left: auto;
+}
+
 .dir-up,
 .dir-down{
     border: none;
     background-color: #fefefe;
+    padding: 0px;
+    padding-left: 8px;
 }
-
 
 .dir-down:hover,
 .dir-up:hover{
@@ -856,18 +915,19 @@ svg path {
 
 .hotel-found{
     display: flex;
-
-    height: 120px;
+    
+    height: 122px;
 
     border-bottom: 1px solid #e5e5e5;
     border-collapse: collapse;
 
-    padding-top: 30px;
+    padding-top: 28px;
     padding-left: 72px;  
 }
 
 .hotel-picture{
     padding-right: 30px;
+    padding-top: 2px;
 }
 
 .hotel-found h3,
@@ -876,22 +936,45 @@ svg path {
     margin: 0px;
 }
 
-.hotel-found .staars,
-.hotel-found .rating{
-    /* margin-left: auto;  Бяка*/
+.hotel-found h3{
+    padding-bottom: 10px;
 }
 
-.hotel-found .more-info{
+.hotel-found span{
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+/* .hotel-found span:nth-of-type(2){ ОПА, а как сделать растояние между спанами если длины слов разные? 
+    padding-left: 39px;
+} */
+
+/* .hotel-found .staars,
+.hotel-found .rating{
+    margin-left: auto;
+} */
+
+.hotel-found .more-info{ /* Не могу сделать их в cтроку, пробовал inkine-block но тогда для выравнивания текста по середине приходится использовать ::after */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    vertical-align: top;
+    text-align: center;
+
     width: 110px;
+    height: 27px;
 }
 
 .hotel-found .booking{
-    width: 142px;
-}
+    display: flex;
+    justify-content: center;  
+    align-items: center;
 
-.booking {
+    width: 142px;
+    height: 27px;
+      
     background-color: #766357; 
-    text-align: center;
 }
 
 .booking,
@@ -933,6 +1016,7 @@ svg path {
 }
 
 
+
 .rating p {
     text-align: center;
     color: #333333;
@@ -953,8 +1037,3 @@ svg path {
     background-position: center;
     background-repeat: no-repeat; 
 }
-
-
-/* ---------СЕТОЧНЫЕ СТИЛИ----------- */
-
-
