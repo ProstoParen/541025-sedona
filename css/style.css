@@ -31,7 +31,7 @@ a {
     color: #000000;
   
     background-color: #ffffff;
-    height: 56px;   
+    min-height: 56px;   
 }
 
 /* Делаю навигацию флексами */
@@ -169,6 +169,13 @@ a.active{
 
     height: 256px;
 }
+
+.devil-bridge .index-content {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
 .index-content-left{
     width: 400px;
 }
@@ -189,7 +196,7 @@ a.active{
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 280px;
+    width: 300px;
     padding-top: 20px;
 }
 /*------------------------------------------------------ОТ ТУТ ЗАКОНЧИЛ 25.08.18------------------------------------------------------------------------ */
@@ -337,7 +344,7 @@ a.active{
     width: 568px;
     height: 86px;
 
-    margin: 50px auto 0;
+    margin: 45px auto 0;
 }
 
 .search-head a{
@@ -358,7 +365,13 @@ a.active{
 }
 
 .search-date{
-    padding-top: 60px;
+    margin: 0;
+    padding-top: 55px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .search-form p{
@@ -372,15 +385,34 @@ a.active{
     margin: 0px;
 }
 
+.date-in,
+.date-out{
+    padding-left: 55px;
+}
+
+.date-in input,
+.date-out input{
+    width: 300px; 
+}
+
+p.old{
+    width: 230px;
+
+}
+
+p.yung{
+    width: 230px;
+}
 
 /* .Cтилизовал, но с кнопками запара, помню что у академии был урок с этой темой но немогу найти, а гугл выдает даболее странные решения.. */
 input {
-    background-image: url(../img/calendar.svg);   
-    background-repeat: no-repeat;    
-    background-position: 4px; 
     outline: none;   
-    padding-left: 20px;   
-    height: 20px; 
+
+    padding-left: 13px; 
+    margin-left: 20px; 
+
+    height: 38px;
+    
     font-size: 14px; 
     font-weight: bold;
     background-color: #f2f2f2;
@@ -388,6 +420,11 @@ input {
 }
 
 .search-form .btn {
+    display: block;
+    width: 458px;
+    height: 58px;
+
+    margin-left: 55px;
     text-align: center;
     color: #ffffff;
     font-size: 21px;
@@ -395,15 +432,15 @@ input {
     border: none;
     background-color: #81b3d2;
 }
-/* не работает( стилизовать их и календарик  с помощью hover не вижу смысла пока они не работают*/
-/* .children input::before{
-    background-image: url(/img/icon-down-dir.svg);
+
+.search-find .btn:focus{
+    background-color:   #5496bd;
+    color: rgba(255, 255, 255, 0.3);
 }
 
-.children input::after{
-    background-image: url(/img/icon-up-dir.svg);
-} */
-
+.search-find .btn:hover{
+    background-color: #669ec0;
+}
 
 .main-footer {
     list-style: none;
@@ -415,83 +452,108 @@ input {
     background-color: rgba(253,253,253,0.9);
 }
 
-.footer-social ul{
-    list-style: none;
+.main-footer-inner{
+    min-height: 120px;
+    padding-top: 28px;
 }
 
 /* А как лучше всего спрятать надписи? */
 .social-btn {
-    display: block;
-    text-indent: -9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #81b3d2;
-    background-size: 12px 22px;
+
     width: 46px;
-    height: 46px;
+    height: 48px;
     background-position: center;
     background-repeat: no-repeat; 
 }
 .footer-social ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding-left: 35px;
+    width: 150px;
+    list-style: none;
 }
 
-.tv-btn {
-    background-image: url(../img/twitter.svg); /* Подогнать размеры как в макете*/
-    background-size: 12px 22px;
+.social-btn{
+    fill: #ffffff;
 }
 
-.fc-btn {
-    background-image: url(../img/fb-icon.svg);
+.social-btn:focus{
+    fill-opacity: 0.3;
 }
 
-.yu-btn {
-    background-image: url(../img/youtube.svg);
+.social-btn:hover{
+    background-color: #669ec0;
 }
 
 .container.flex{
     display: flex;
-    width: 1065px;
-    margin: 0 auto;
+    width: 1200px;
+    margin: 0;
     justify-content: space-between;
 }
 
 .footer-contacts{
-    
     width: 160px;
+    margin: 0;
+
+    margin-left: 133px;
+    margin-top: 9px;
 }
 
 .footer-social{
     width: 170px;
+    margin-left: -46px;
 }
 
 .footer-copyright{
+    display: flex;
     width: 210px;
+    padding-right: 85px;
+    margin-top: 4px;
+}
+
+.footer-contacts p{
+    margin: 0;
 }
 
 .footer-copyright p{
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
+
+    margin-top: 5px;
+    margin-right: 8px;
 }
 /* Если вставляю в "а" ничего не отображается  */
 .footer-copyright div{
-    background-image: url(../img/logo-htmlacademy.svg);
     width: 115px;
     height: 41px;
     background-position: center;
     background-repeat: no-repeat; 
 }
 
-/* Естественно не работает */
-
-.footer-copyright a {
-    display: block;
-    width: 115px;
-    height: 41px;
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-image: url(../img/logo-htmlacademy.svg);
-    color: #000000;
+svg path {
+    stroke:inherit;
+    stroke-width:inherit;
+    fill:inherit;
 }
+
+.footer-logo:hover{
+    fill: #81b3d2;
+}
+
+.footer-logo:focus{
+    fill-opacity: 0.3;
+}
+
 
 /* Спрятал */
 .visually-hidden:not(:focus):not(:active) {
@@ -509,16 +571,9 @@ input {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-/* от тута чет сложно */
-/* .footer-copyright a:hover{
-    color: #81b3d2;
-}
-
-.footer-copyright a:active{
-    color: rgba(0,0,0,.3);
-} */
 
 /* 2 страница */
+
 
 .found{
     background-color: #fefefe;
@@ -530,19 +585,22 @@ input {
 }
 
 .filters{
- height: 220px;
-}
-
-.filters-form form{
-    display: flex;
-
     height: 217px;
 
     background-color: #000000;
     background-image: url(../img/filters-logo.jpg);
     background-position: center;
     background-repeat: no-repeat;
+}
 
+.filters .container{
+    width: 1056px;
+    margin: 0 auto;
+}
+
+.filters-form form{
+    padding-top: 26px;
+    display: flex;
 }
 
 .filters-form fieldset { /* А как разместить четбоксы и подписи к ним на одной строчке?  */
@@ -550,21 +608,157 @@ input {
     flex-direction: column;
 
     border:0 none;
-    }
+}
 
 .infrastructure{
     width:240px;
+    margin-right: 15px;
 }
 
 .accommodation {
     width:240px;
 }
 
-.value {
-    width:400px;
-    background-color: red;
+/* ------------------------------------------ФИЛЬТР---------------------------------- */
+.value{
+   padding: 0px;
+   margin-left: auto;
+}
 
-    margin-left: auto;
+.filter-range {
+    width: 318px;
+    margin: 0;
+
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.filter-range-title {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.price-controls {
+    position: relative;
+  
+    height: 33px;
+    margin-bottom: 20px;
+
+    font-size: 0;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 2px;
+    height: 22px;
+
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 60px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+
+    color: inherit;
+    font: inherit;
+
+    background: none;
+    border: none;
+}
+
+.range-controls {
+    position: relative;
+
+    margin-bottom: 30px;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+
+    width: 4px;
+    height: 4px;
+
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.btn-transparent {
+    width: 137px;
+    
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-transparent:hover {
+    color: #000000;
+
+    background: #ffffff;
 }
 
 .filters-form legend {
@@ -582,11 +776,16 @@ input {
     line-height: 21px;
     font-weight: normal;
 }
-/* Нужно стилизовать четбоксы, но я не знаю как */
 
-.sorting {
+.container-smaal{
     display: flex;
 
+    width: 1056px;
+
+    margin: 0 auto;
+}
+/* -------------------------------------30/08/18--------------------------------------- */
+.sorting {
     height: 83px;
 
     border-bottom: 1px solid #e5e5e5; 
@@ -595,7 +794,9 @@ input {
 .sorting h2{
     margin: 0px;
 }
+
 .sorting ul{
+    display: flex;
     margin: 0px;
     list-style: none;
 }
@@ -611,6 +812,8 @@ input {
 }
 
 .sorting a{
+    font-size: 12px;
+    line-height: 18px;
     color: rgba(0,0,0,0.3);
     border-bottom: dashed;
 }
@@ -629,43 +832,26 @@ input {
     border-bottom: none;
 }
 
-/* Как изменить цвет у SVG!!!? */
-.dir-up{
-    background-image: url(../img/icon-up-dir.svg);  
-    
-    background-position: center;
-    background-repeat: no-repeat; 
-    width: 11px;
-    height: 10px;
-    
-    border: none; 
-    background-color: #fefefe;
-    color: #81b3d2; 
-}
-
+.dir-up,
 .dir-down{
-    background-image: url(../img/icon-down-dir.svg);  
-
-    background-position: center;
-    background-repeat: no-repeat; 
-    width: 11px;
-    height: 10px;
-
     border: none;
     background-color: #fefefe;
-    color: #cacaca;
 }
 
-.dir-down a:hover{
-    color: #000000;
+
+.dir-down:hover,
+.dir-up:hover{
+    fill: rgba(0,0,0,.3);
 }
 
-.dir-down a:focus{
-    color: #81b3d2;
+.dir-down:focus,
+.dir-up:focus{
+    fill: #81b3d2;
 }
 
-.dir-down a:active{
-    color: rgba(0,0,0,.3);
+.dir-down:active,
+.dir-up:active{
+    fill: #81b3d2;
 }
 
 .hotel-found{
@@ -708,8 +894,8 @@ input {
     text-align: center;
 }
 
-.booking a,
-.more-info a{
+.booking,
+.more-info{
     text-align: center;
     color: #ffffff;
     font-size: 14px;
@@ -717,21 +903,21 @@ input {
     font-weight: bold;
 }
 /* Методом тыка выяснил что если поменять а на р все работает \_О_о_/ */
-.more-info p:hover{
+.more-info:hover{
     background-color: #669ec0;
 }
 
-.more-info p:active{
+.more-info:active{
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
 
-.booking p:hover,
+.booking:hover,
 .search-head:hover{
     background-color: #604e43;
 }
 
-.booking p:active,
+.booking:active,
 .search-head:active{
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
