@@ -25,6 +25,8 @@ img{
 .wrapper {
     width: 1200px;
     margin: 0px auto;
+
+    box-shadow:  0 15px rgba(0,0,0,0.5);
 }
 
 .main-navigation {
@@ -217,7 +219,7 @@ a.active{
 
 .index-content-right img{ /*---Все равно изображение не попадает в pp---- */
     object-fit: cover;
-    
+ 
     height: 256px;
 }
 
@@ -242,6 +244,8 @@ a.active{
 .features {
     display: flex;
     justify-content: space-around;
+
+    background-color: #ffffff;
     text-align: center;
     list-style: none;
 
@@ -259,7 +263,7 @@ a.active{
     background-repeat: no-repeat; 
     width: 300px;
 
-    padding-top: 104px;
+    padding-top: 102px;
 }
 
 .features b{
@@ -272,6 +276,8 @@ a.active{
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
+
+    margin-top: 20px;
 }
 
 .housing {
@@ -303,7 +309,7 @@ a.active{
 
 .bottom p{
     margin: 0 auto;
-    width: 255px;
+    width: 265px;
 }
 
 .bottom{
@@ -361,6 +367,7 @@ a.active{
 
 .search-form {
     position: absolute;
+    z-index: 2;
     width: 568px;
     height: 395px;
     left: calc(50% - (568px/2));
@@ -391,30 +398,46 @@ a.active{
 
 .date-in,
 .date-out{
-    padding-left: 55px;
+    padding-left: 57px;
 }
 
 .date-in input,
 .date-out input{
-    width: 300px; 
+    width: 333px; 
+    padding-left: 13px;
 }
 
 p.old{
-    width: 230px;
+    margin-left: 57px;
+    margin-right: 20px;
+}
 
+.old input{
+    margin-left: 36px;
+    text-align: center;
 }
 
 p.yung{
-    width: 230px;
+    margin-right: 54px;   
+    text-align: left;
+}
+
+.yung label{
+    width: 40px;
+}
+/* Мда, пиксель перфект убивает */
+.yung input{
+    margin-left: 22px;
+    text-align: center;
 }
 
 /* .Cтилизовал, но с кнопками запара, помню что у академии был урок с этой темой но немогу найти, а гугл выдает даболее странные решения.. */
 input {
     outline: none;   
 
-    padding-left: 13px; 
     margin-left: 20px; 
-
+    
+    width: 114px;
     height: 38px;
     
     font-size: 14px; 
@@ -437,6 +460,14 @@ input {
     background-color: #81b3d2;
 }
 
+.search-find .btn{
+    margin-top: 25px;
+}
+
+.search-find .btn:hover{
+    background-color: #669ec0;
+}
+
 .search-find .btn:focus{
     background-color:   #5496bd;
     color: rgba(255, 255, 255, 0.3);
@@ -447,6 +478,7 @@ input {
 }
 
 .main-footer {
+    position: relative;
     list-style: none;
 
     font-size: 21px;
@@ -456,7 +488,13 @@ input {
     background-color: rgba(253,253,253,0.9);
 }
 
+.maps{
+
+}
+
+
 .main-footer-inner{
+
     height: 120px;
     padding-top: 28px;
 }
@@ -652,8 +690,9 @@ svg path {
 
 .filters-form input[type="checkbox"] + label{
     display:inline-block;
-    margin: -1px 4px 0 0;
     vertical-align: middle;
+
+    margin: -1px 4px 0 0;
     background: url(../img/checkbox-off.svg) left top no-repeat;
     cursor: pointer;
 }
@@ -719,10 +758,11 @@ svg path {
 
 .price-controls label {
     display: inline-block;
-
+    vertical-align: top;
+    
     font-size: 14px;
     line-height: 38px;
-    vertical-align: top;
+    
 
     cursor: pointer;
 }
@@ -942,6 +982,8 @@ svg path {
 
 .hotel-found span{
     display: inline-block;
+    vertical-align: top;
+
     padding-bottom: 12px;
 }
 
