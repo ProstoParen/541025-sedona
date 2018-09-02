@@ -8,7 +8,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper index"> <!--добавить класс только здесь и отопзиионировать футер через два класса -->
 <header class="main-header">
     <div class="container">
       <nav class="main-navigation">
@@ -25,10 +25,10 @@
           <li>
             <a href="hotels.html">ГОСТИНИЦЫ</a>
           </li>
-          <li class="logo">
-            <a href="index.html"><img src="img/logo-sedona.svg" width="135" height="71" alt="Логотип города Sedona"></a>  
-          </li>
         </ul>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип города Sedona"></a>  
+        </div>
       </nav>
     </div>
 </header>
@@ -135,12 +135,12 @@
 		</div>
 </section>
 </main>
-<footer class="main-footer">
+<footer class="main-footer"> <!--position релатив-->
 	<div class="maps">  
 		<img src="img/map.jpg" width="1200" height="594" alt="США, штат Аризона, Седона">
     </div> 
-    <div class="main-footer-inner">
-	    <div class="container flex"> <!--Обернуть в див майн футер инер-->
+    <div class="main-footer-inner"> <!--position absolute-->
+	    <div class="container flex">
 		    <section class="footer-contacts">
 		        <p class="featires-item">#VISITSEDONA</p>
 		    </section>

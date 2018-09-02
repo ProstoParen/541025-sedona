@@ -11,27 +11,27 @@
 <div class="wrapper"><!-- Обернуть все в див для тени-->
 <header class="main-header">
     <div class="container">
-      <nav class="main-navigation">
-        <ul class="site-navigation">
-          <li>
-            <a href="#">ИНФОРМАЦИЯ</a> 
-          </li>
-          <li>
-            <a href="#">ФОТО И ВИДЕО</a>
-          </li>
-          <li>
-            <a href="#">КАРТА ШТАТА</a>
-          </li>
-          <li>
-            <a href="hotels.html" class="active">ГОСТИНИЦЫ</a>
-          </li>
-          <li class="logo">
-            <a href="index.html"><img src="img/logo-sedona.svg" width="135" height="71" alt="Логотип города Sedona"></a>  
-          </li>
-        </ul>
-      </nav>
-    </div>
-</header>
+        <nav class="main-navigation">
+            <ul class="site-navigation">
+                <li>
+                    <a href="#">ИНФОРМАЦИЯ</a> 
+                </li>
+                <li>
+                    <a href="#">ФОТО И ВИДЕО</a>
+                </li>
+                <li>
+                    <a href="#">КАРТА ШТАТА</a>
+                </li>
+                <li>
+                    <a href="hotels.html">ГОСТИНИЦЫ</a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип города Sedona"></a>  
+            </div>
+          </nav>
+        </div>
+    </header>
 <main class="main-content">
     <h1 class="visually-hidden">Бронирование гостиниц</h1> 
     <section class="filters"> 
@@ -41,22 +41,22 @@
                 <form action="" method="get">
                     <fieldset class="infrastructure">
                         <legend>ИНФРАСТРУКТУРА:</legend>
-                        <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field"> БАССЕЙН</label> <!--Cами чеки экспортировать в двух состояниях как изображения и скрыть через визуал хиден что бы поменять на другой-->
-                        <input type="checkbox" name="parking" id="parking-field"><label for="parking-field"> ПАРКОВКА</label>
-                        <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field"> WI-FI</label>
+                        <input type="checkbox" name="pool" id="pool-field" checked><label for="pool-field" tabindex="0"> БАССЕЙН</label> 
+                        <input type="checkbox" name="parking" id="parking-field"><label for="parking-field" tabindex="0"> ПАРКОВКА</label>
+                        <input type="checkbox" name="WI-FI" id="WI-FI-field"><label for="WI-FI-field" tabindex="0"> WI-FI</label>
                     </fieldset>
                     <fieldset class="accommodation">
                         <legend>ТИП ЖИЛЬЯ</legend>
-                        <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field"> ГОСТИНИЦА</label>
-                        <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field"> МОТЕЛЬ</label>
-                        <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field"> АПАРТАМЕНТЫ</label>
+                        <input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field" tabindex="0"> ГОСТИНИЦА</label>
+                        <input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field" tabindex="0"> МОТЕЛЬ</label>
+                        <input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field" tabindex="0"> АПАРТАМЕНТЫ</label>
                     </fieldset>
                     <fieldset class="value">
                         <div class="filter-range">
                                 <div class="filter-range-title">Стоимость в сутки (р):</div>
                                 <div class="price-controls">
-                                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-                                  <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+                                  <label class="min-price"><input type="text" name="min-price" placeholder="от 0"></label>
+                                  <label class="max-price"><input type="text" name="max-price" placeholder="до 3000"></label>
                                 </div>
                                 <div class="range-controls">
                                     <div class="scale">
@@ -106,7 +106,7 @@
                     <img src="img/hotel-picture.jpg" width="135" height="90" alt="Гостиница">
                 </div>
                 <div>
-                    <h3>AMARA RESORT  &amp; SPA</h3> <!--Кажись это ссылка-->
+                    <h3>AMARA RESORT  &amp; SPA</h3> 
                         <div>
                             <span>ГОСТИНИЦА</span> 
                             <span>ОТ  4000 Р.</span>
@@ -115,7 +115,7 @@
                     <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
                 </div>
                 <div class="staars">
-                    <!-- Звездочки повторяющимся фоном -->
+                    <!-- Звездочки повторяющимся фоном вырезать по новой-->
                 </div>
                 <div class="rating">
                     <p>РЕЙТИНГ: 8,5 </p>

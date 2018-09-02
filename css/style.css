@@ -26,47 +26,45 @@ img{
     width: 1200px;
     margin: 0px auto;
 
-    box-shadow:  0 15px rgba(0,0,0,0.5);
+    box-shadow:  0 0 15px rgba(0,0,0,0.5);
+}
+
+.main-header{
+    background-color: #ffffff;
 }
 
 .main-navigation {
+    position: relative;
+
     font-size: 14px;
     line-height: 26px;
     list-style: none;
     font-weight: bold;
     color: #000000;
   
-    background-color: #ffffff;
     min-height: 56px;   
 }
 
-/* Делаю навигацию флексами */
 .site-navigation {
     list-style: none;
     display: flex;
     margin: 0px;
     padding: 0px;
-    justify-content: space-around;
     align-items: center;
+
+    min-height: 56px;
 }
 
-.site-navigation li:nth-child(1){
-    order: 1;
-}
-
-.site-navigation li:nth-child(2){
-    order: 2;
-}
-
-.site-navigation li:nth-child(3){
-    order: 4;
-}
-.site-navigation li:nth-child(4){
-    order: 5;
+.main-header .container{
+    width: 1057px;
+    margin: 0 auto; 
 }
 
 .logo{
-    order: 3;
+    position: absolute;
+    top: 0px;
+    left: 459px;
+
     z-index: 1; /* Вот тут магия*/
 }
 
@@ -75,13 +73,19 @@ img{
     height: 56px;
 }
 
-
-/* Кстати лого все же не по центру */
-/* Задаю флексам ширину */
 .site-navigation li{
-    flex-shrink: 0;
+    flex-shrink: 0;   
 }
 
+/* По другому я не попадаю */
+.site-navigation li:nth-of-type(2){
+    margin-left: 147px;
+    margin-right: 388px;
+}
+
+.site-navigation li:last-child{
+    margin-left: 166px;
+}
 
 .site-navigation a {
     color: #000000;
@@ -102,14 +106,14 @@ a.active{
 /* Задаю лого */
 .index-logo{
     background-color: #e3f0f8;
-    background-image: url(../img/index-logo.jpg); /* Заменил на картинку в высоком разрешении, старая сыпалась, и кстати именно она закрывает лого */
+    background-image: url(../img/index-logo.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 
     
-    background-position: 0px -84px; /* Иначе в фон я не попадаю! */
+    background-position: 0px -84px;
 }
 
 .index-logo::after{
@@ -223,9 +227,6 @@ a.active{
     height: 256px;
 }
 
-.intro{
-    /* Задать размеры через паддинг */
-}
 
 .index-content-left h2,
 .hotel-found h3{
@@ -485,21 +486,28 @@ input {
     line-height: 26px;
     font-weight: bold;
     color: #000000;
-    background-color: rgba(253,253,253,0.9);
 }
 
 .maps{
-
+    height: 593px;
 }
 
 
 .main-footer-inner{
-
+    background-color: rgba(253,253,253,0.9);
     height: 120px;
-    padding-top: 28px;
 }
 
-/* А как лучше всего спрятать надписи? */
+.index .main-footer-inner {
+    position: absolute;   
+    bottom: 0px;
+}
+
+.main-footer-inner .container{
+    padding-top: 36px;
+}
+
+
 .social-btn {
     display: flex;
     align-items: center;
@@ -558,7 +566,7 @@ input {
 .footer-copyright{
     display: flex;
     width: 210px;
-    padding-right: 85px;
+    padding-right: 87px;
     margin-top: 4px;
 }
 
@@ -571,10 +579,10 @@ input {
     line-height: 26px;
     font-weight: normal;
 
-    margin-top: 5px;
-    margin-right: 8px;
+    margin-top: 6px;
+    margin-right: 7px;
 }
-/* Если вставляю в "а" ничего не отображается  */
+
 .footer-copyright div{
     width: 115px;
     height: 41px;
@@ -631,6 +639,7 @@ svg path {
 
     background-color: #000000;
     background-image: url(../img/filters-logo.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -676,7 +685,8 @@ svg path {
 }
 
 /* Стилизация четбоксов */
-.filters-form label{
+.filters-form .infrastructure label,
+.filters-form .accommodation label {
     padding-left: 40px;
 
     width: 110px;
@@ -732,15 +742,23 @@ svg path {
 }
 
 .price-controls {
+    display: flex;
+
     position: relative;
   
     height: 33px;
     margin-bottom: 20px;
 
-    font-size: 0;
-
     border: 2px solid #ffffff;
     border-radius: 2px;
+}
+
+.price-controls input{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+
 }
 
 .price-controls::after {
@@ -757,7 +775,6 @@ svg path {
 }
 
 .price-controls label {
-    display: inline-block;
     vertical-align: top;
     
     font-size: 14px;
@@ -769,8 +786,8 @@ svg path {
 
 .price-controls .min-price,
 .price-controls .max-price {
-    width: 90px;
-    padding-left: 60px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .price-controls input {
@@ -911,14 +928,14 @@ svg path {
     margin-left: 33px;
 }
 
-/* А как оформить "активный" из стил гайда? */
 .sorting a:hover{
     color: #81b3d2;
-    border-bottom: dashed;
+    border-bottom: 1px dotted;
 }
 
 .sorting a:focus{
     color: #81b3d2;
+    border-bottom: 1px dotted;
 }
 
 .sorting a:active{
@@ -935,7 +952,7 @@ svg path {
     border: none;
     background-color: #fefefe;
     padding: 0px;
-    padding-left: 8px;
+    margin-left: 8px;
 }
 
 .dir-down:hover,
@@ -987,14 +1004,10 @@ svg path {
     padding-bottom: 12px;
 }
 
-/* .hotel-found span:nth-of-type(2){ ОПА, а как сделать растояние между спанами если длины слов разные? 
-    padding-left: 39px;
-} */
-
-/* .hotel-found .staars,
+.hotel-found .staars,
 .hotel-found .rating{
     margin-left: auto;
-} */
+} 
 
 .hotel-found .more-info{ /* Не могу сделать их в cтроку, пробовал inkine-block но тогда для выравнивания текста по середине приходится использовать ::after */
     display: flex;
@@ -1074,8 +1087,8 @@ svg path {
 
 .staars {
     background-image: url(../img/star.svg);
-    width: 17px;
+    width: 90px;
     height: 18px;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: space; 
 }
