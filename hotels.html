@@ -8,7 +8,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="wrapper"><!-- Обернуть все в див для тени-->
+<div class="wrapper">
 <header class="main-header">
     <div class="container">
         <nav class="main-navigation">
@@ -55,8 +55,8 @@
                         <div class="filter-range">
                                 <div class="filter-range-title">Стоимость в сутки (р):</div>
                                 <div class="price-controls">
-                                  <label class="min-price"><input type="text" name="min-price" placeholder="от 0"></label>
-                                  <label class="max-price"><input type="text" name="max-price" placeholder="до 3000"></label>
+                                  <label class="min-price"><input type="text" name="min-price" placeholder="ОТ 0"></label>
+                                  <label class="max-price"><input type="text" name="max-price" placeholder="ДО 3000"></label>
                                 </div>
                                 <div class="range-controls">
                                     <div class="scale">
@@ -107,18 +107,23 @@
                 </div>
                 <div>
                     <h3>AMARA RESORT  &amp; SPA</h3> 
-                        <div>
+                    <div class="flex-container">
+                        <div class="more-info-container">
                             <span>ГОСТИНИЦА</span> 
-                            <span>ОТ  4000 Р.</span>
+                            <a href="#" class="more-info">ПОДРОБНЕЕ</a>                          
                         </div> 
-                    <a href="#" class="more-info">ПОДРОБНЕЕ</a>
-                    <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
+                        <div class="booking-container">
+                            <span>ОТ  4000 Р.</span>
+                            <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="staars">
-                    <!-- Звездочки повторяющимся фоном вырезать по новой-->
-                </div>
-                <div class="rating">
-                    <p>РЕЙТИНГ: 8,5 </p>
+                <div class="stars-and-rating">
+                    <div class="stars five-stars">
+                    </div>
+                    <div class="rating">
+                        <p>РЕЙТИНГ: 8,5 </p>
+                    </div>
                 </div>
             </li>
             <li class="hotel-found">
@@ -127,18 +132,23 @@
                 </div>
                 <div>
                     <h3>DESERT QUAIL INN</h3>
-                    <div>
+                <div class="flex-container">
+                    <div class="more-info-container">
                         <span>МОТЕЛЬ</span> 
+                        <a href="#" class="more-info">ПОДРОБНЕЕ</a>
+                    </div>   
+                    <div class="booking-container">
                         <span>ОТ  3000 Р.</span>
-                    </div> 
-                    <a href="#" class="more-info">ПОДРОБНЕЕ</a>
-                    <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
+                        <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
+                    </div>
                 </div>
-                <div class="staars">
-                <!-- Звездочки -->
                 </div>
-                <div class="rating">
-                    <p>РЕЙТИНГ: 8,9 </p>
+                <div class="stars-and-rating">
+                    <div class="stars three-stars">
+                    </div>
+                    <div class="rating">
+                        <p>РЕЙТИНГ: 8,9 </p>
+                    </div>
                 </div>
             </li>
             <li class="hotel-found">
@@ -146,19 +156,24 @@
                     <img src="img/apartaments.jpg" width="135" height="90" alt="АПАРТАМЕНТЫ">
                 </div>
                 <div>
-                    <h3>VILLAS AT POCO DIABLO  &amp; SPA</h3>
-                    <div>
-                        <span>АППАРТАМЕНТЫ</span> 
-                        <span>ОТ  2000 Р.</span>
+                    <h3>VILLAS AT POCO DIABLO</h3>
+                <div class="flex-container">
+                    <div class="more-info-container">
+                        <span>АПАРТАМЕНТЫ</span> 
+                        <a href="#" class="more-info">ПОДРОБНЕЕ</a>
                     </div> 
-                    <a href="#" class="more-info">ПОДРОБНЕЕ</a>
-                    <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
+                    <div class="booking-container">
+                        <span>ОТ  2000 Р.</span>
+                        <a href="#" class="booking">ЗАБРОНИРОВАТЬ</a> 
+                    </div>
                 </div>
-                <div class="staars">
-                <!-- Звездочки -->
                 </div>
-                <div class="rating">
-                    <p>РЕЙТИНГ: 9,2 </p>
+                <div class="stars-and-rating">
+                    <div class="stars two-stars">
+                    </div>
+                    <div class="rating">
+                        <p>РЕЙТИНГ: 9,2 </p>
+                    </div>
                 </div>
             </li>
         </ul>

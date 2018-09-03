@@ -1,7 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-/* ОНУЛИТЬ ПАДИНГИ У РОДИТЕЛЬСКИХ ЕЛЕМЕНТОВ! */
-/* Проверить у неработающих элементов тип, а то может применяю блочные свойства к строчным элементам */
 body {
     min-width: 1200px;
 
@@ -65,7 +63,7 @@ img{
     top: 0px;
     left: 459px;
 
-    z-index: 1; /* Вот тут магия*/
+    z-index: 3; /* Вот тут магия*/
 }
 
 .logo a{
@@ -256,6 +254,10 @@ a.active{
     min-height: 270px;
 }
 
+.features.bottom{
+    background-color: #eeeeee;
+}
+
 .features-item {
     background-size: 75px 72px; 
     
@@ -291,10 +293,6 @@ a.active{
 
 .suvenir {
     background-image: url(../img/icon-2.svg);
-}
-
-.devil-bridge {
-    background-color: #eeeeee; 
 }
 
 .bottom li{
@@ -355,7 +353,7 @@ a.active{
     width: 568px;
     height: 86px;
 
-    margin: 45px auto 0;
+    margin: 46px auto 0;
 }
 
 .search-head a{
@@ -490,6 +488,10 @@ input {
 
 .maps{
     height: 593px;
+}
+
+.maps iframe{
+    position: absolute;
 }
 
 
@@ -658,7 +660,7 @@ svg path {
 
 .filters-form form{
     padding-top: 26px;
-    display: flex;
+    display: flex;  
 }
 
 .filters-form fieldset { 
@@ -666,10 +668,11 @@ svg path {
     flex-direction: column;
 
     border:0 none;
+    padding-top: 2px;
 }
 
 .filters-form legend {
-    padding-bottom: 27px;
+    padding-bottom: 25px;
 
     color: #ffffff;
     font-size: 16px;
@@ -702,6 +705,7 @@ svg path {
     display:inline-block;
     vertical-align: middle;
 
+    padding-top: 1px;
     margin: -1px 4px 0 0;
     background: url(../img/checkbox-off.svg) left top no-repeat;
     cursor: pointer;
@@ -735,6 +739,7 @@ svg path {
 }
 
 .filter-range-title {
+    padding-left: 5px;
     margin-bottom: 9px;
     font-weight: 600;
     font-size: 16px;
@@ -757,9 +762,22 @@ svg path {
     display: block;
     box-sizing: border-box;
     width: 100%;
+
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
     text-align: center;
 
 }
+
+.price-controls input::-webkit-input-placeholder{
+
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+
 
 .price-controls::after {
     content: "";
@@ -790,8 +808,20 @@ svg path {
     flex-shrink: 0;
 }
 
+.min-price{
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.max-price{
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+
 .price-controls input {
-    width: 50px;
+    width: 150px;
+    height: 30px;
     margin: 0;
 
     color: inherit;
@@ -980,6 +1010,7 @@ svg path {
 
     padding-top: 28px;
     padding-left: 72px;  
+    padding-right: 72px;
 }
 
 .hotel-picture{
@@ -990,7 +1021,8 @@ svg path {
 .hotel-found h3,
 .hotel-found div,
 .hotel-found p{
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .hotel-found h3{
@@ -998,18 +1030,17 @@ svg path {
 }
 
 .hotel-found span{
-    display: inline-block;
     vertical-align: top;
 
     padding-bottom: 12px;
 }
 
-.hotel-found .staars,
+.hotel-found .stars,
 .hotel-found .rating{
     margin-left: auto;
 } 
 
-.hotel-found .more-info{ /* Не могу сделать их в cтроку, пробовал inkine-block но тогда для выравнивания текста по середине приходится использовать ::after */
+.hotel-found .more-info{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1039,6 +1070,8 @@ svg path {
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
+
+    margin-top: 13px;
 }
 /* Методом тыка выяснил что если поменять а на р все работает \_О_о_/ */
 .more-info:hover{
@@ -1061,6 +1094,10 @@ svg path {
     background-color: #503e33;
 }
 
+.flex-container{
+    display: flex;
+}
+
 /* Я почти уверен что это ссылка */
 .hotel-found h3:hover{
     color: #81b3d2;
@@ -1070,25 +1107,70 @@ svg path {
     color: rgba(0,0,0,.3);
 }
 
-
-
 .rating p {
     text-align: center;
+    padding-top: 4px;
     color: #333333;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
     background-color: #f2f2f2;
+    width: 110px;
+    height: 23px;
 }
 
 .hotel{
     list-style: none;
 }
 
-.staars {
-    background-image: url(../img/star.svg);
-    width: 90px;
+.stars {
+    background-image: url(../img/stars.png);
     height: 18px;
     background-position: center;
-    background-repeat: space; 
+    background-repeat: space;
 }
+
+.five-stars{
+    width: 96px;
+}
+
+.three-stars{
+    width: 72px;
+}
+
+.two-stars{
+    width: 48px;
+}
+
+.stars-and-rating{
+    margin-left: auto;
+}
+
+.stars-and-rating .stars{
+    margin-bottom: 47px;
+}
+
+.more-info-container{
+    width: 110px;
+    margin-right: 6px; 
+}
+
+.booking-container{
+    width: 150px;
+    margin-right: 0px; 
+}
+
+/* form for java */
+.search-form.java-form{
+    display: block;
+    position: static;
+    margin: 0 auto;
+}
+
+/* для java скрипта */
+.modal-schow{ 
+    display: none;
+}
+
+
+
