@@ -20,11 +20,22 @@ img{
     height: auto;
 }
 
+
 .wrapper {
     width: 1200px;
     margin: 0px auto;
 
     box-shadow:  0 0 15px rgba(0,0,0,0.5);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+    
+.footer{
+    margin-top: auto;
 }
 
 .main-header{
@@ -33,6 +44,7 @@ img{
 
 .main-navigation {
     position: relative;
+    display: flex;
 
     font-size: 14px;
     line-height: 26px;
@@ -987,7 +999,7 @@ svg path {
     display: flex;
     align-items: center;
 
-    min-height: 86px;
+    height: 86px;
     border-bottom: 1px solid #e5e5e5; 
 }
 
@@ -1199,7 +1211,6 @@ svg path {
 .stars {
     background-image: url(../img/stars.png);
     height: 18px;
-    background-position: center;
     background-repeat: space;
 }
 
