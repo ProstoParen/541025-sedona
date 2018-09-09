@@ -53,7 +53,7 @@ img{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-
+    
     margin: 0px;
     padding: 0px;
     align-items: center;
@@ -71,7 +71,7 @@ img{
     top: 0px;
     left: 459px;
 
-    z-index: 3; /* Вот тут магия*/
+    z-index: 3; 
 }
 
 .logo a{
@@ -80,7 +80,7 @@ img{
 }
 
 .site-navigation{
-    flex-shrink: 0;   
+
 }
 
 /* По другому я не попадаю */
@@ -90,7 +90,7 @@ img{
 }
 
 .site-navigation li:last-child{
-    margin-left: 166px;
+    margin-left: 159px;
 }
 
 .site-navigation a {
@@ -109,7 +109,6 @@ a.active{
     color: rgba(0,0,0, 0.3);
 }
 
-/* Задаю лого */
 .index-logo{
     background-color: #e3f0f8;
     background-image: url(../img/index-logo.jpg);
@@ -250,6 +249,7 @@ a.active{
 .features {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     
     background-color: #ffffff;
     text-align: center;
@@ -290,11 +290,6 @@ a.active{
 
     margin-top: 20px;
 }
-
-.features ul{
-    flex-wrap: wrap;
-}
-
 
 .housing {
     background-image: url(../img/icon-1.svg);     
@@ -502,9 +497,6 @@ p.yung{
     color: rgba(255, 255, 255, 0.3);
 }
 
-
-/*-------------------------------------------------- form icons ---------------------------------------------*/
-
 .arrival-date,
 .date-of-departure,
 .decrease,
@@ -696,8 +688,6 @@ svg path {
     fill-opacity: 0.3;
 }
 
-
-/* Спрятал */
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
   
@@ -713,9 +703,6 @@ svg path {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-
-/* 2 страница */
-
 
 .found{
     background-color: #fefefe;
@@ -813,7 +800,6 @@ svg path {
     width:240px;
 }
 
-/* ------------------------------------------ФИЛЬТР---------------------------------- */
 .value{
    padding: 0px;
    margin-left: auto;
@@ -998,7 +984,7 @@ svg path {
 
     margin: 0 auto;
 }
-/* -------------------------------------30/08/18--------------------------------------- */
+
 .sorting {
     display: flex;
     align-items: center;
@@ -1009,6 +995,7 @@ svg path {
 
 .sorting h2{
     margin-right: 49px;
+    flex-shrink: 0;
 }
 
 .sorting ul{
@@ -1067,6 +1054,7 @@ svg path {
 
 .arrow{
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .dir-up,
@@ -1166,7 +1154,7 @@ svg path {
 
     margin-top: 13px;
 }
-/* Методом тыка выяснил что если поменять а на р все работает \_О_о_/ */
+
 .more-info:hover{
     background-color: #669ec0;
 }
@@ -1191,7 +1179,6 @@ svg path {
     display: flex;
 }
 
-/* Я почти уверен что это ссылка */
 .hotel-found h3:hover{
     color: #81b3d2;
 }
@@ -1275,8 +1262,6 @@ svg path {
 
     animation: opacity 1s;
 }
-
-/* -------------------------animation------------------------ */
 
 .modal-error {
   animation: shake 0.6s;
