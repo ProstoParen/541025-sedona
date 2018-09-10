@@ -32,7 +32,7 @@ img {
     box-shadow:  0 0 15px rgba(0,0,0,0.5);
 }
     
-.main-header{
+.main-header {
     background-color: #ffffff;
 }
 
@@ -106,7 +106,7 @@ img {
     color: #81b3d2;
 }
 
-a.active{
+a.active {
     color: #766357;
 }
 
@@ -114,7 +114,7 @@ a.active{
     color: rgba(0,0,0, 0.3);
 }
 
-.index-logo{
+.index-logo {
     background-color: #e3f0f8;
     background-image: url(../img/index-logo.jpg);
     background-position: center;
@@ -212,8 +212,15 @@ a.active{
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 294px;
     padding-top: 20px;
+}
+
+.real-town-text {
+    width: 302px;
+}
+
+.devil-bridge-text {
+    width: 302px;
 }
 
 .index-content-left,
@@ -315,6 +322,10 @@ a.active{
     width: 160px;
 }
 
+.transference b {
+    width: 158px;
+}
+
 .bottom p {
     padding-top: 22px;
     margin: 0 auto;
@@ -325,7 +336,7 @@ a.active{
     width: 259px;
 }
 
-.bottom{
+.bottom {
     padding-top: 46px;
     min-height: 210px;
 }
@@ -447,7 +458,7 @@ a.active{
     padding-left: 13px;
 }
 
-p.old{
+p.old {
     margin-left: 55px;
     margin-right: 20px;
 }
@@ -700,7 +711,7 @@ svg path {
     fill: #81b3d2;
 }
 
-.footer-logo:focus{
+.footer-logo:focus {
     fill-opacity: 0.3;
 }
 
@@ -832,7 +843,7 @@ svg path {
     width:240px;
 }
 
-.value{
+.value {
    padding: 0px;
    margin-left: auto;
 }
